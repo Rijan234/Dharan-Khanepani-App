@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Backend\CustomerController;
+use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\StatisticsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +21,8 @@ Route::middleware('auth')->group(function () {
 
     
     Route::resource('/statistics' , StatisticsController::class)->names('statistics');
+    Route::resource('/employee' , EmployeeController::class)->names('employee');
+    Route::resource('/customer' , CustomerController::class)->names('customer');
 });
 
 require __DIR__.'/auth.php';
