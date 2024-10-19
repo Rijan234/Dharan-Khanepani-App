@@ -9,6 +9,7 @@
     <meta name="generator" content="Hugo 0.88.1">
 
     <title>Water Management Board - Dharan</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('photos/logos.png') }}">
 
     @vite(['resources/css/app.css','resources/js/app.js'])
     <link rel="stylesheet" href="https://flowbite.com/application-ui/demo/app.css">
