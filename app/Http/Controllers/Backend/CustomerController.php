@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -12,7 +13,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return view('customer.index');
+        $customers = Customer::all();
+        return view('customer.index', compact('customers'));
     }
 
     /**
@@ -28,7 +30,17 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $customer = new Customer();
+        $customer->customer_first_name = $request->first_name;
+        $customer->customer_last_name = $request->last_name;
+        $customer->meter_id = $request->meter_id;
+        $customer->phone_number = $request->phone_number;
+        $customer->ward_no = $request->ward_no;
+        $customer->tole = $request->tole_name;
+        uploadImage($request, $customer, 'customer_photo');
+        $customer->save();
+        return redirect()->route('customer.index');
+
     }
 
     /**
@@ -44,7 +56,10 @@ class CustomerController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return "i am here";
+        $customer = Customer::findOrFail($id);
+        return $customer;
+        return response()->json($customer);
     }
 
     /**

@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/test', function () {
+    return view('test');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
@@ -23,6 +26,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('/statistics' , StatisticsController::class)->names('statistics');
     Route::resource('/employee' , EmployeeController::class)->names('employee');
     Route::resource('/customer' , CustomerController::class)->names('customer');
+
+
 });
 
 require __DIR__.'/auth.php';
