@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
+
+        // Sample tole data that could be fetched from a database or configuration
+        protected $toleData = [
+            "Ward-7" => ["Tole 7A", "Tole 7B", "Tole 7C"],
+            "Ward-8" => ["Tole 8A", "Tole 8B"],
+            "Ward-15" => ["Tole 15A", "Tole 15B", "Tole 15C"]
+        ];
     /**
      * Display a listing of the resource.
      */
@@ -56,10 +63,14 @@ class CustomerController extends Controller
      */
     public function edit(string $id)
     {
-        return "i am here";
-        $customer = Customer::findOrFail($id);
-        return $customer;
-        return response()->json($customer);
+       // Retrieve the customer by ID
+       $customer = Customer::findOrFail($id);
+
+       // Pass the customer and tole data to the view
+       return view('customer.edit', [
+           'customer' => $customer,
+           'toleData' => $this->toleData
+       ]);
     }
 
     /**
@@ -75,6 +86,6 @@ class CustomerController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return $id;
     }
 }

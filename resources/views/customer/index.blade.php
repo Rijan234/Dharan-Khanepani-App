@@ -103,9 +103,9 @@
                                 <th scope="col" class="_wYiJGbRZyFZeCc8y7Sf gMXmdpOPfqG_3CKkL0VD ezMFUVl744lvw6ht0lFe upQp7iWehfaU8VTbfx_w PeR2JZ9BZHYIH8Ea3F36 sdSaZcRa4_We5kKaX4pf XIIs8ZOri3wm8Wnj9N_y">
                                     Name
                                 </th>
-                                <th scope="col" class="_wYiJGbRZyFZeCc8y7Sf gMXmdpOPfqG_3CKkL0VD ezMFUVl744lvw6ht0lFe upQp7iWehfaU8VTbfx_w PeR2JZ9BZHYIH8Ea3F36 sdSaZcRa4_We5kKaX4pf XIIs8ZOri3wm8Wnj9N_y">
+                                <!-- <th scope="col" class="_wYiJGbRZyFZeCc8y7Sf gMXmdpOPfqG_3CKkL0VD ezMFUVl744lvw6ht0lFe upQp7iWehfaU8VTbfx_w PeR2JZ9BZHYIH8Ea3F36 sdSaZcRa4_We5kKaX4pf XIIs8ZOri3wm8Wnj9N_y">
                                     Client ID
-                                </th>
+                                </th> -->
                                 <th scope="col" class="_wYiJGbRZyFZeCc8y7Sf gMXmdpOPfqG_3CKkL0VD ezMFUVl744lvw6ht0lFe upQp7iWehfaU8VTbfx_w PeR2JZ9BZHYIH8Ea3F36 sdSaZcRa4_We5kKaX4pf XIIs8ZOri3wm8Wnj9N_y">
                                     Meter ID
                                 </th>
@@ -127,13 +127,15 @@
                                     </div>
                                 </td> -->
                                 <td class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 _wYiJGbRZyFZeCc8y7Sf a6oNxeE2_RMYuJ3ruA_U e2hrZSYddULUFUtJ9wBR BHrWGjM1Iab_fAz0_91H bqENLAd5lw7DYVe46RFH">
-                                    <img class="hlT3pgfpx11BUFMWNdhc Mln3CkDzLcoVQAC3Uqsd RpVwy4sO7Asb86CncKJ_" src="{{ $customer->customer_photo }}" alt=" avatar">
+                                    <!-- <img class="hlT3pgfpx11BUFMWNdhc Mln3CkDzLcoVQAC3Uqsd RpVwy4sO7Asb86CncKJ_" src="
+                                     
+                                    " alt=" avatar"> -->
                                     <div class="c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">
                                         <div class="d3C8uAdJKNl1jzfE9ynq yM_AorRf2jSON3pDsdrz __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">{{ $customer->customer_first_name }} {{ $customer->customer_last_name }}</div>
                                         <div class="c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">{{ $customer->ward_no }}</div>
                                     </div>
                                 </td>
-                                <td class="_wYiJGbRZyFZeCc8y7Sf d3C8uAdJKNl1jzfE9ynq ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl BHrWGjM1Iab_fAz0_91H OyABRrnTV_kvHV7dJ0uE">{{ $customer->customer_id }}</td>
+                                <!-- <td class="_wYiJGbRZyFZeCc8y7Sf d3C8uAdJKNl1jzfE9ynq ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl BHrWGjM1Iab_fAz0_91H OyABRrnTV_kvHV7dJ0uE">{{ $customer->customer_id }}</td> -->
                                 <td class="_wYiJGbRZyFZeCc8y7Sf d3C8uAdJKNl1jzfE9ynq _43MO1gcdi2Y0RJW1uHL __9sbu0yrzdhGIkLWNXl BHrWGjM1Iab_fAz0_91H OyABRrnTV_kvHV7dJ0uE">
                                     <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2">
                                         <div class="LBw_xNY6RemSb6arrxbk ZCcDCx3VW8mhFqKa8r5J RpVwy4sO7Asb86CncKJ_ _8jNXfz935bbH_fAUIpN fhCwost7CSNRc2WSHLFW"></div> {{ $customer->meter_id }}
@@ -144,16 +146,16 @@
 
 
                                 <td class="_wYiJGbRZyFZeCc8y7Sf EU43bH15DCmsqkGyVBGj BHrWGjM1Iab_fAz0_91H">
-                                    <button type="button" data-modal-toggle="user-modal" class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY mveJTCIb2WII7J4sY22F YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM edit-btn" data-id="{{ $customer->customer_id }}">
+                                    <!-- <button type="button" data-modal-toggle="user-modal" class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY mveJTCIb2WII7J4sY22F YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM edit-btn" data-id="{{ $customer->customer_id }}">
                                         <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG fhCwost7CSNRc2WSHLFW" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path>
                                             <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path>
                                         </svg>
                                         Edit user
-                                    </button>
+                                    </button> -->
                                     <a href="{{ route('customer.edit', $customer->customer_id) }}" class="edit-link">
-                                        <button type="button" data-modal-toggle="user-modal" class="edit-btn">
-                                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <button type="button" class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY mveJTCIb2WII7J4sY22F YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM edit-btn">
+                                            <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG fhCwost7CSNRc2WSHLFW" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path>
                                                 <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path>
                                             </svg>
@@ -162,12 +164,17 @@
                                     </a>
 
 
-                                    <button type="button" data-modal-toggle="delete-user-modal" class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki mveJTCIb2WII7J4sY22F _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ g0psQAXAFirvUBcDyMSb">
+
+                                    <button type="button" data-modal-toggle="delete-user-modal" class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki mveJTCIb2WII7J4sY22F _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ g0psQAXAFirvUBcDyMSb delete-btn" 
+                                    data-id="{{ $customer->customer_id }}" 
+                                    onclick="confirmDelete(this)">
+                                    
                                         <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG fhCwost7CSNRc2WSHLFW" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path>
                                         </svg>
                                         Delete user
                                     </button>
+
                                 </td>
                             </tr>
                             @endforeach
@@ -178,36 +185,7 @@
         </div>
     </div>
 
-    <!-- previous next -->
-    <!-- <div class="nNOlnAWW1_F9_q_s4umb VuoyqWQkm5MTiE515qz8 ZjE1E_5ejL_PlLNIq3MM Q_jg_EPdNf9eDMn1mLI2 t6gkcSf0Bt4MLItXvDJ_ _wYiJGbRZyFZeCc8y7Sf _Ybd3WwuTVljUT4vEaM3 pVSXSlnJdgskzP7BxPBe qUWbS_LTZujDB4XCd11V rvdRhGyExrNYTA6euxsF PkbUjvbha500DQzbEAMM _1jTZ8KXRZul60S6czNi _fGhMnSfYmaGrv7DvZ00">
-        <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 hD0sTTDgbxakubcHVW2X tkZo48dB4RhnHSlDXzoe">
-            <a href="#" class="_k0lTW0vvzboctTxDi2R Nm7xMnguzOx6J5Ao7yCU sQaK4IH7BIQSgBTGX8Pe PeR2JZ9BZHYIH8Ea3F36 Y3FxyuXtj2gecrGXvLEI SA5DoMHfwOFtY4h_qzuM ZnBoTVi7VOJdCLSSU62n _7KA5gD55t2lxf9Jkj20 XIIs8ZOri3wm8Wnj9N_y OPrb_iG5WDy_7F05BDOX dMTOiA3mf3FTjlHu6DqW">
-                <svg class="RWlOLn85L9w5_1l9GIaX bLH_DeiQ7Cp4iBqeW3kq" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-            </a>
-            <a href="#" class="_k0lTW0vvzboctTxDi2R Nm7xMnguzOx6J5Ao7yCU sQaK4IH7BIQSgBTGX8Pe fhCwost7CSNRc2WSHLFW PeR2JZ9BZHYIH8Ea3F36 Y3FxyuXtj2gecrGXvLEI SA5DoMHfwOFtY4h_qzuM ZnBoTVi7VOJdCLSSU62n _7KA5gD55t2lxf9Jkj20 XIIs8ZOri3wm8Wnj9N_y OPrb_iG5WDy_7F05BDOX dMTOiA3mf3FTjlHu6DqW">
-                <svg class="RWlOLn85L9w5_1l9GIaX bLH_DeiQ7Cp4iBqeW3kq" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                </svg>
-            </a>
-            <span class="c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">Showing <span class="yM_AorRf2jSON3pDsdrz __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">1-20</span> of <span class="yM_AorRf2jSON3pDsdrz __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">2290</span></span>
-        </div>
-        <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 hLiU_EU6hK5DGt8Nzo2B">
-            <a href="#" class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU _74lpPUMEtHf6F0_fjLe _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY mveJTCIb2WII7J4sY22F YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM">
-                <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG _x10ClrjYfqGxZTMmpBl ZEPNZzATe5nPnS0shmrF" "="" fill=" currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Previous
-            </a>
-            <a href="#" class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU _74lpPUMEtHf6F0_fjLe _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY mveJTCIb2WII7J4sY22F YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM">
-                Next
-                <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG c2LzVf9SsdSEMBrRjNwS uq6K_W9aRWoQeVKPE1pl" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                </svg>
-            </a>
-        </div>
-    </div> -->
+   
 
 
 
@@ -334,9 +312,16 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                     <h3 class="KC0h1uHEHnCjmnE_rg8g EyjJPKD7jgGRBhaLpRVI vyo_A8gnQD1QWDPglr3h _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">Are you sure you want to delete this user?</h3>
-                    <a href="#" class="y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F d3C8uAdJKNl1jzfE9ynq _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id fhCwost7CSNRc2WSHLFW XBY_JGK9cKtkYP_iHVRb">
+                    <!-- <a href="#" class="y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F d3C8uAdJKNl1jzfE9ynq _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id fhCwost7CSNRc2WSHLFW XBY_JGK9cKtkYP_iHVRb">
                         Yes, I'm sure
-                    </a>
+                    </a> -->
+                    <form action="{{ route('customer.destroy', $customer->customer_id) }}" method="post">
+                        @csrf
+                        @method('delete')
+                        <input type="hidden" name="customer_id" id="customer-id" value="">
+
+                        <button class="y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F d3C8uAdJKNl1jzfE9ynq _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id fhCwost7CSNRc2WSHLFW XBY_JGK9cKtkYP_iHVRb"> Yes, I'm sure {{ $customer->customer_id }}</button>
+                    </form>
                     <a href="#" class="__9sbu0yrzdhGIkLWNXl _Ybd3WwuTVljUT4vEaM3 _7KA5gD55t2lxf9Jkj20 _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T pXhVRBC8yaUNllmIWxln qUWbS_LTZujDB4XCd11V ezMFUVl744lvw6ht0lFe _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 mveJTCIb2WII7J4sY22F d3C8uAdJKNl1jzfE9ynq _Cj_M6jt2eLjDgkBBNgI cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id _1jTZ8KXRZul60S6czNi XIIs8ZOri3wm8Wnj9N_y Mmx5lX7HVdrWCgh3EpTP dMTOiA3mf3FTjlHu6DqW OPrb_iG5WDy_7F05BDOX yChACvAr1v8czJ2VO22j" data-modal-toggle="delete-user-modal">
                         No, cancel
                     </a>
@@ -424,6 +409,7 @@
 
 </x-layout>
 
+<!-- searching operation -->
 <script>
     function limitLength(input) {
         if (input.value.length > 10) {
@@ -439,53 +425,5 @@
     }
 </script>
 
+<!-- delete ooperation -->
 
-<script>
-    document.querySelectorAll('.edit-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            // Get data from button attributes
-            const customerId = button.getAttribute('data-id');
-            const firstName = button.getAttribute('data-first-name');
-            const lastName = button.getAttribute('data-last-name');
-            const phone = button.getAttribute('data-phone');
-            const ward = button.getAttribute('data-ward');
-            const tole = button.getAttribute('data-tole');
-
-            // Populate modal fields
-            document.getElementById('customer-id').value = customerId;
-            document.getElementById('first-name').value = firstName;
-            document.getElementById('last-name').value = lastName;
-            document.getElementById('phone').value = phone;
-            document.getElementById('ward').value = ward;
-            document.getElementById('tole').value = tole;
-
-            // Open the modal (ensure your modal library supports this)
-            document.getElementById('user-modal').classList.add('open');
-        });
-    });
-</script>
-
-<script>
-    $(document).ready(function() {
-        // Attach click event to the button with class 'edit-btn'
-        $(document).on('click', '.edit-btn', function() {
-            // Get the customer ID from the data-id attribute
-            let customerId = $(this).data('id');
-
-            // Make an AJAX request to the edit route
-            $.ajax({
-                url: `/customer/${customerId}/edit`, // Use the correct URL to the edit route
-                type: 'GET', // Use GET since you are retrieving data
-                success: function(response) {
-                    // Handle the successful response here
-                    console.log(response); // You can process the customer data as needed
-                    // For example, you could display the customer data in a modal or form
-                },
-                error: function(xhr) {
-                    // Handle errors here
-                    console.error('An error occurred:', xhr);
-                }
-            });
-        });
-    });
-</script>
