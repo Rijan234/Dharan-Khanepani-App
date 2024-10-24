@@ -32,9 +32,7 @@
             <h1 class="vyo_A8gnQD1QWDPglr3h yM_AorRf2jSON3pDsdrz __9sbu0yrzdhGIkLWNXl NdexIDe6BTJXjtSnppoV OyABRrnTV_kvHV7dJ0uE">Edit Customer</h1>
         </div>
         <!-- Right Content -->
-        <form action="{{ route('customer.update',$customer->customer_id )}}" method="post" enctype="multipart/form-data">
-            @csrf
-            @method('put')
+       
             <div class="EWLTGduHCjFnjN6tLCXV Atl0coQVHTfJeIp5DBNr">
                 <div class="_Ybd3WwuTVljUT4vEaM3 mngKhi_Rv06PF57lblDI mveJTCIb2WII7J4sY22F _wYiJGbRZyFZeCc8y7Sf _YxZw_O8dWkTljptcO7z SWDELhWFjL8JxEtm91_o _1jTZ8KXRZul60S6czNi hD0sTTDgbxakubcHVW2X">
                     <div class="Q_jg_EPdNf9eDMn1mLI2 rvdRhGyExrNYTA6euxsF xu6Xcz2CnxX04u4eQAne _Zd6CFkEZSNEHC9TBkyE SQf297smyJVNzzOO3iQL LvH1cgobxEYMRPVAp8WW fxDO_pTRQLZKehDay_Tf">
@@ -44,46 +42,9 @@
                             <div class="hD0sTTDgbxakubcHVW2X d3C8uAdJKNl1jzfE9ynq _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">
                                 {{ $customer->ward_no }}
                             </div>
-                            <label for="upload" class="custom-file-input _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 b9aD6g2qw84oyZNsMO8j _Cj_M6jt2eLjDgkBBNgI c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY mveJTCIb2WII7J4sY22F YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM">
-                                <svg class="fhCwost7CSNRc2WSHLFW ZEPNZzATe5nPnS0shmrF E9GV5sZJIbfO_GEQ_moc _o2IXcpM0qnG3JPReKus" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.5 13a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 13H11V9.413l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13H5.5z"></path>
-                                    <path d="M9 13h2v5a1 1 0 11-2 0v-5z"></path>
-                                </svg>
-                                Change picture
-                                <input type="file" name="customer_photo" id="upload" style="display: none;" />
-                            </label>
+                          
 
-                            <!-- Preview Section -->
-                            <div id="preview-container" style="margin-top: 10px;">
-                                <img id="preview" style="max-width: 200px; display: none;" />
-                                <p id="file-name"></p>
-                            </div>
-
-                            <script>
-                                const uploadInput = document.getElementById('upload');
-                                const previewImg = document.getElementById('preview');
-                                const fileNameDisplay = document.getElementById('file-name');
-
-                                uploadInput.addEventListener('change', (event) => {
-                                    const file = event.target.files[0];
-
-                                    if (file) {
-                                        fileNameDisplay.textContent = ` ${file.name}`;
-
-                                        // If the file is an image, preview it
-                                        if (file.type.startsWith('image/')) {
-                                            const reader = new FileReader();
-                                            reader.onload = (e) => {
-                                                previewImg.src = e.target.result;
-                                                previewImg.style.display = 'block';
-                                            };
-                                            reader.readAsDataURL(file);
-                                        } else {
-                                            previewImg.style.display = 'none';
-                                        }
-                                    }
-                                });
-                            </script>
+                        
 
                         </div>
                     </div>
@@ -178,9 +139,7 @@
                         </div>
 
 
-                        <div class="_P4crYcwEj3d10LO5o8N sm:col-full">
-                            <button class="y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F c8dCx6gnV43hTOLV6ks5 ZjWEEmDsdPvU2GdH53LK cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM" type="submit">Save all</button>
-                        </div>
+                     
                     </div>
 
                 </div>
@@ -218,7 +177,7 @@
                         </div> -->
 
             </div>
-        </form>
+       
     </div>
 
 </x-layout>
