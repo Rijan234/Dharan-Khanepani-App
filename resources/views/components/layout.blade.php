@@ -63,6 +63,7 @@
 
 
     <script src="https://flowbite.com/application-ui/demo/app.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
 
 </body>
 
