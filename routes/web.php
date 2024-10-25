@@ -12,6 +12,14 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('test');
 });
+Route::get('/app',function(){
+    return view('layout/app');
+});
+#creating route to redirect user to view 'register.blade.php' to register a new accont
+
+Route::get('/register',function(){
+    return view('register');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
