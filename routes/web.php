@@ -15,6 +15,10 @@ Route::get('/test', function () {
  Route::get('/login',function(){
     return view('login');
  });
+
+ Route::get('/learnmore',function(){
+    return view('learnmore');
+ });
 Route::get('/app',function(){
     return view('layout/app');
 });
