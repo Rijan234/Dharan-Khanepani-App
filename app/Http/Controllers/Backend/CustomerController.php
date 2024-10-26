@@ -96,12 +96,11 @@ class CustomerController extends Controller
     {
         $customer = Customer::findOrFail($id);
 
-        // Delete customer photo if it exists
-        if ($customer->customer_photo && Storage::disk('public')->exists($customer->customer_photo)) {
-            Storage::disk('public')->delete($customer->customer_photo);
-        }
 
         $customer->delete();
+        if(file_exists($customer->customer_photo)){
+            unlink($customer->customer_photo);
+        }
         return redirect()->route('customer.index')->with('success', 'Customer deleted successfully.');
     }
 

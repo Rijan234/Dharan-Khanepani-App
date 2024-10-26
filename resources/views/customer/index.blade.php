@@ -118,6 +118,7 @@
                             </tr>
                         </thead>
                         <tbody class="_Ybd3WwuTVljUT4vEaM3 Zy1Pypi71Xu6guex6urN NIAblPiyeuYQ0zW671xb _1jTZ8KXRZul60S6czNi XpuPpk9eXhVCrleKmXDr">
+                            @if($customers->isNotEmpty())
                             @foreach($customers as $customer)
                             <tr class="_7KA5gD55t2lxf9Jkj20 OPrb_iG5WDy_7F05BDOX">
                                 <!-- <td class="E9GV5sZJIbfO_GEQ_moc _wYiJGbRZyFZeCc8y7Sf">
@@ -130,12 +131,12 @@
                                     <!-- <img class="hlT3pgfpx11BUFMWNdhc Mln3CkDzLcoVQAC3Uqsd RpVwy4sO7Asb86CncKJ_" src="
                                      
                                     " alt=" avatar"> -->
-                                   <a href="{{ route('customer.show', $customer->customer_id) }}">
-                                   <div class="c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">
-                                        <div class="d3C8uAdJKNl1jzfE9ynq yM_AorRf2jSON3pDsdrz __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">{{ $customer->customer_first_name }} {{ $customer->customer_last_name }}</div>
-                                        <div class="c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">{{ $customer->ward_no }}</div>
-                                    </div>
-                                   </a>
+                                    <a href="{{ route('customer.show', $customer->customer_id) }}">
+                                        <div class="c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">
+                                            <div class="d3C8uAdJKNl1jzfE9ynq yM_AorRf2jSON3pDsdrz __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">{{ $customer->customer_first_name }} {{ $customer->customer_last_name }}</div>
+                                            <div class="c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">{{ $customer->ward_no }}</div>
+                                        </div>
+                                    </a>
                                 </td>
                                 <!-- <td class="_wYiJGbRZyFZeCc8y7Sf d3C8uAdJKNl1jzfE9ynq ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl BHrWGjM1Iab_fAz0_91H OyABRrnTV_kvHV7dJ0uE">{{ $customer->customer_id }}</td> -->
                                 <td class="_wYiJGbRZyFZeCc8y7Sf d3C8uAdJKNl1jzfE9ynq _43MO1gcdi2Y0RJW1uHL __9sbu0yrzdhGIkLWNXl BHrWGjM1Iab_fAz0_91H OyABRrnTV_kvHV7dJ0uE">
@@ -167,10 +168,9 @@
 
 
 
-                                    <button type="button" data-modal-toggle="delete-user-modal" class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki mveJTCIb2WII7J4sY22F _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ g0psQAXAFirvUBcDyMSb delete-btn" 
-                                    data-id="{{ $customer->customer_id }}" 
-                                    onclick="confirmDelete(this)">
-                                    
+                                    <button type="button" class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki mveJTCIb2WII7J4sY22F _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ g0psQAXAFirvUBcDyMSb delete-btn"
+                                        data-customer-id="{{ $customer->customer_id }}">
+
                                         <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG fhCwost7CSNRc2WSHLFW" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path>
                                         </svg>
@@ -180,6 +180,11 @@
                                 </td>
                             </tr>
                             @endforeach
+                            @else
+                            <tr>
+                                <td colspan="5" class="text-center">No records found.</td>
+                            </tr>
+                            @endif
                         </tbody>
                     </table>
                 </div>
@@ -187,7 +192,7 @@
         </div>
     </div>
 
-   
+
 
 
 
@@ -317,13 +322,10 @@
                     <!-- <a href="#" class="y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F d3C8uAdJKNl1jzfE9ynq _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id fhCwost7CSNRc2WSHLFW XBY_JGK9cKtkYP_iHVRb">
                         Yes, I'm sure
                     </a> -->
-                    <form action="{{ route('customer.destroy', $customer->customer_id) }}" method="post">
-                        @csrf
-                        @method('delete')
+                  
                         <input type="hidden" name="customer_id" id="customer-id" value="">
 
-                        <button class="y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F d3C8uAdJKNl1jzfE9ynq _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id fhCwost7CSNRc2WSHLFW XBY_JGK9cKtkYP_iHVRb"> Yes, I'm sure {{ $customer->customer_id }}</button>
-                    </form>
+                        <button class="y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F d3C8uAdJKNl1jzfE9ynq _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id fhCwost7CSNRc2WSHLFW XBY_JGK9cKtkYP_iHVRb"> Yes, I'm sure </button>
                     <a href="#" class="__9sbu0yrzdhGIkLWNXl _Ybd3WwuTVljUT4vEaM3 _7KA5gD55t2lxf9Jkj20 _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T pXhVRBC8yaUNllmIWxln qUWbS_LTZujDB4XCd11V ezMFUVl744lvw6ht0lFe _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 mveJTCIb2WII7J4sY22F d3C8uAdJKNl1jzfE9ynq _Cj_M6jt2eLjDgkBBNgI cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id _1jTZ8KXRZul60S6czNi XIIs8ZOri3wm8Wnj9N_y Mmx5lX7HVdrWCgh3EpTP dMTOiA3mf3FTjlHu6DqW OPrb_iG5WDy_7F05BDOX yChACvAr1v8czJ2VO22j" data-modal-toggle="delete-user-modal">
                         No, cancel
                     </a>
@@ -332,82 +334,75 @@
         </div>
     </div>
 
-    <!-- Edit Modal -->
-    <div class="_LPVUrp9Uina5fcERqWC TYmpscr1PwuC1dpYXDpM ZjE1E_5ejL_PlLNIq3MM Jq3rRDG6Hsr3eAZ0KJeH Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU _SmdlCf6eUKB_V9S5IDj LQrvJzHhtGuotyv_EF_N _lTTGxW9MVI40FyDCtmr _lAzsNe8Mc9FYKCKyXJT k6hbvxXxe_du942IR0vX YEIqrYYZZnouxfWI2aiR NaQJIEi_uYbdAsDO0j69" id="user-modal">
-        <div class="ahOqFrhzLjivRe8a1kX_ t6gkcSf0Bt4MLItXvDJ_ uLPch_bqyJDXwe5tynMV TnCneWVBJS9LByVLKjZH RZmKBZs1E1eXw8vkE6jY IerQx_TrL55Lkoy6sBIE">
-            <!-- Modal content -->
-            <div class="ahOqFrhzLjivRe8a1kX_ _Ybd3WwuTVljUT4vEaM3 mveJTCIb2WII7J4sY22F mngKhi_Rv06PF57lblDI _1jTZ8KXRZul60S6czNi">
-                <!-- Modal header -->
-                <div class="YRrCJSr_j5nopfm4duUc _7_AEkSp_Gi6KH9ZW6st sJNGKHxFYdN5Nzml5J2j TcRv2CxEufCAnWVUJnDf EpUSgjHdM6oyMXUiK_8_ zQeL_bQRwh9WGEnvS5ug _fGhMnSfYmaGrv7DvZ00">
-                    <h3 class="vyo_A8gnQD1QWDPglr3h yM_AorRf2jSON3pDsdrz OyABRrnTV_kvHV7dJ0uE">
-                        Edit customer
-                    </h3>
-                    <button type="button" class="_JmTNv5EiHqK2A1jcQSf mW4LfSTbez3WHPeTDguY lBgPGkku8NiP5ReH09_2 ZnBoTVi7VOJdCLSSU62n mveJTCIb2WII7J4sY22F c8dCx6gnV43hTOLV6ks5 Z4DH5a4vmjReSFRBpPgz zjZIaeYZzHaaBqxD5KzF _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 OPrb_iG5WDy_7F05BDOX dMTOiA3mf3FTjlHu6DqW" data-modal-toggle="user-modal">
-                        <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
+    
+
+    <!-- Delete Confirmation Modal -->
+    @if($customers->isNotEmpty())
+    <div id="deleteModal" class="fixed inset-0 bg-black bg-opacity-10 flex items-center justify-center hidden">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-sm">
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Delete Item</h2>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+                Are you sure you want to delete this item? This action cannot be undone.
+            </p>
+
+            <form id="deleteForm" method="POST">
+                @csrf
+                @method('DELETE')
+                <div class="flex justify-end space-x-4">
+                    <button
+                        id="cancelBtn"
+                        type="button"
+                        class="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
+                        Cancel
+                    </button>
+                    <button
+                        type="submit"
+                        class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
+                        Delete
                     </button>
                 </div>
-                <!-- Modal body -->
-                <div class="IvHclGgvMLtYg_ow0uba qDsn8ha5_HppqMcLKJwF">
-
-                    <form action="{{ route('customer.update', $customer->customer_id ) }}" method="post" enctype="multipart/form-data">
-                        @csrf
-                        @method('put')
-                        <div class="xCPtuxM4_gihvpPwv9bX xcwgeeZbzBfzbYbc32HH Bcw8VuwRWYxPGjWjS6Ig">
-                            <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                <label for="first-name" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">First Name</label>
-                                <input type="text" name="first_name" id="first-name" value="{{ $customer->customer_first_name }}" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" placeholder="Ram" autocomplete="off" required="">
-                            </div>
-                            <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                <label for="last-name" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Last Name</label>
-                                <input type="text" name="last_name" id="last-name" value="{{ $customer->customer_last_name }}" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" placeholder="Rai" autocomplete="off" required="">
-                            </div>
-                            <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                <label for="meter-id" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Meter ID</label>
-                                <input type="meter-id" name="meter_id" id="meter-id" value="{{ $customer->meter_id }}" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" placeholder="015553" autocomplete="off" required="">
-                            </div>
-                            <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                <label for="phone-number" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Phone Number</label>
-                                <input type="text" name="phone_number" id="phone-number" value="{{ $customer->phone_number }}" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" placeholder="" pattern="\d*" maxlength="10" autocomplete="off" required="">
-                            </div>
-                            <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                <label for="ward-no" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Ward No</label>
-                                <select name="ward_no" id="ward-no" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5">
-                                    <option value="" disabled selected>Select Ward No</option>
-                                    <option value="Ward-7">Ward 7</option>
-                                    <option value="Ward-8">Ward 8</option>
-                                    <option value="Ward-15">Ward 15</option>
-                                </select>
-                            </div>
-                            <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                <label for="tole-name" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Tole</label>
-                                <select name="tole_name" id="tole-name" disabled class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5">
-                                    <option value="" disabled selected>Select Tole</option>
-                                </select>
-                            </div>
-
-
-
-                        </div>
-                        <div class="mt-4">
-                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="user_avatar">Select Photo</label>
-                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" name="customer_photo" type="file">
-                            <!-- <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div> -->
-                        </div>
-
-                </div>
-                <!-- Modal footer -->
-                <div class="Q_jg_EPdNf9eDMn1mLI2 IvHclGgvMLtYg_ow0uba pVSXSlnJdgskzP7BxPBe qUWbS_LTZujDB4XCd11V _4S0zan6DXh_qcS8KsOi _fGhMnSfYmaGrv7DvZ00">
-                    <button class="y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F c8dCx6gnV43hTOLV6ks5 ZjWEEmDsdPvU2GdH53LK cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM" type="submit">Update</button>
-                </div>
-                </form>
-
-            </div>
-
-
+            </form>
         </div>
     </div>
+@endif
+
+
+
+    <script>
+        // Get elements
+        const deleteModal = document.getElementById('deleteModal');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const deleteForm = document.getElementById('deleteForm');
+
+        // Function to open the modal and update the form action
+        const openModal = (customerId) => {
+            deleteForm.action = `/customer/${customerId}`; // Update action with customer_id
+            deleteModal.classList.remove('hidden');
+        };
+
+        // Function to close the modal
+        const closeModal = () => {
+            deleteModal.classList.add('hidden');
+        };
+
+        // Add event delegation for delete buttons
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.delete-btn')) {
+                const customerId = e.target.closest('.delete-btn').dataset.customerId;
+                openModal(customerId);
+            }
+        });
+
+        // Add event listener to cancel button
+        cancelBtn.addEventListener('click', closeModal);
+
+        // Close modal when clicking outside of it
+        window.addEventListener('click', (e) => {
+            if (e.target === deleteModal) {
+                closeModal();
+            }
+        });
+    </script>
 
 </x-layout>
 
@@ -428,4 +423,3 @@
 </script>
 
 <!-- delete ooperation -->
-
