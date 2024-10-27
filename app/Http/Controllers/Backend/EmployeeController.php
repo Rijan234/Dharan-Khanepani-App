@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Employee;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
@@ -12,7 +13,8 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        return view('employee.index');
+        $employees = Employee::all();
+        return view('employee.index', compact('employees'));
     }
 
     /**
@@ -28,7 +30,21 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $employee = new Employee();
+        $employee->employee_first_name = $request->first_name;
+        $employee->employee_last_name = $request->last_name;
+        $employee->phone_number = $request->phone_number;
+        $employee->address = $request->address;
+        $employee->position = $request->position;
+        
+
+        // Handle file upload for employee photo
+        if ($request->hasFile('employee_photo')) {
+            uploadImage($request, $employee, 'employee_photo');
+        }
+
+        $employee->save();
+        return redirect()->route('employee.index')->with('success', 'Employee created successfully.');
     }
 
     /**
@@ -36,7 +52,8 @@ class EmployeeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $employee = Employee::findOrFail($id);
+        return view('employee.show', compact('employee'));
     }
 
     /**
@@ -44,7 +61,13 @@ class EmployeeController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $employee = Employee::findOrFail($id);
+        // return $employee;
+
+        return view('employee.edit', [
+            'employee' => $employee,
+            
+        ]);
     }
 
     /**
@@ -52,7 +75,25 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $employee = Employee::findOrFail($id);
+
+        // Update fields
+        $employee->employee_first_name = $request->first_name;
+        $employee->employee_last_name = $request->last_name;
+        $employee->address = $request->address;
+        $employee->phone_number = $request->phone_number;
+        $employee->position = $request->position;
+
+        // Handle photo update if a new file is uploaded
+        if ($request->hasFile('employee_photo')) {
+            // Delete old photo if exists
+          unlink($employee->employee_photo);
+            // Store new photo
+            uploadImage($request, $employee, 'employee_photo');
+        }
+
+        $employee->update();
+        return redirect()->route('employee.index')->with('success', 'employee updated successfully.');
     }
 
     /**
@@ -60,6 +101,15 @@ class EmployeeController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $employee = Employee::findOrFail($id);
+
+
+        $employee->delete();
+        if(file_exists($employee->employee_photo)){
+            unlink($employee->employee_photo);
+        }
+        return redirect()->route('employee.index')->with('success', 'Employee deleted successfully.');
     }
+
+   
 }
