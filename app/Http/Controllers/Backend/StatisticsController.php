@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Demand;
 use Illuminate\Http\Request;
 
 class StatisticsController extends Controller
@@ -12,7 +13,8 @@ class StatisticsController extends Controller
      */
     public function index()
     {
-        return view('statistics.index');
+        $wards = Demand::all();
+        return view('statistics.index', compact('wards'));
     }
 
     /**
@@ -44,7 +46,13 @@ class StatisticsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $ward = Demand::findOrFail($id);
+        // return $ward;
+
+        return view('ward.edit', [
+            'ward' => $ward,
+            
+        ]);
     }
 
     /**

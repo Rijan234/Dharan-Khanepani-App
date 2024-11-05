@@ -34,6 +34,8 @@
             document.documentElement.classList.remove('v2fLMH8w3xgUEQcl63H9')
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
 
 </head>
 
