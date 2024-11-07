@@ -70,20 +70,31 @@
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
 
     <!-- water level -->
-     <!-- water level js -->
-<script>
-    function updateWaterLevel() {
-        fetch('/update-water-level')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('water-level').textContent = data.current_level + ' liters';
-            })
-            .catch(error => console.error('Error:', error));
-    }
+      <!-- Second JavaScript Portion: Fetch Data and Update Chart -->
+      <script>
+        function updateWaterLevel() {
+            fetch('/update-water-level')
+                .then(response => response.json())
+                .then(data => {
+                    const currentLevel = data.current_level;
+                    document.getElementById('water-level').textContent = currentLevel + ' liters';
 
-    // Update water level every second
-    setInterval(updateWaterLevel, 1000);
-</script>
+                    // Calculate available water percentage and empty space
+                    availableWater = (currentLevel / 1600000) * 100; // Assuming 1,600,000 is the tank's max capacity
+                    emptySpace = 100 - availableWater;
+
+                    // Update chart data
+                    waterLevelChart.data.datasets[0].data = [availableWater, emptySpace];
+                    waterLevelChart.update();
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Update water level every second
+        setInterval(updateWaterLevel, 1000);
+    </script>
+
+    
 
 </body>
 

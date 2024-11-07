@@ -2,20 +2,27 @@
 <x-layout>
 
     <!-- water level -->
-    <div>
-        <canvas id="waterLevelChart"></canvas>
+    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div>
+            <h1>Water Level</h1>
+        </div>
+        <div>
+            <canvas id="waterLevelChart"></canvas>
+        </div>
     </div>
     <div>
-    <h3>Current Water Level:</h3>
-    <p id="water-level">Loading...</p>
-</div>
+        <h3>Current Water Level:</h3>
+        <p id="water-level">Loading ...</p>
+    </div>
+
+    <!-- First JavaScript Portion: Initialize the Chart -->
     <script>
-        const availableWater = 80; // Available water in percentage
-        const emptySpace = 100 - availableWater; // Remaining space
+        // Placeholder for initial values
+        let availableWater = 0;
+        let emptySpace = 100;
 
         const ctx = document.getElementById('waterLevelChart').getContext('2d');
-
-        new Chart(ctx, {
+        const waterLevelChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
                 labels: ['Available Water', 'Empty Space'],
@@ -45,7 +52,7 @@
                             label: function(context) {
                                 const label = context.label || '';
                                 const value = context.raw || 0;
-                                return `${label}: ${value}%`;
+                                return `${label}: ${value.toFixed(2)}%`; // Limit to two decimal places
                             }
                         }
                     }
@@ -53,9 +60,6 @@
             }
         });
     </script>
-
-    
-
 
 
 

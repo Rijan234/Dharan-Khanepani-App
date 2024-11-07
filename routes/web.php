@@ -2,9 +2,12 @@
 
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\EmployeeController;
+use App\Http\Controllers\Backend\ScheduleController as BackendScheduleController;
+use App\Http\Controllers\Backend\SchedulerController;
 use App\Http\Controllers\Backend\StatisticsController;
 use App\Http\Controllers\Backend\WaterLogController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ScheduleController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -40,12 +43,15 @@ Route::middleware('auth')->group(function () {
 
     
     Route::resource('/statistics' , StatisticsController::class)->names('statistics');
-    Route::resource('/employee' , EmployeeController::class)->names('employee');
     Route::resource('/customer' , CustomerController::class)->names('customer');
+    Route::resource('/employee' , EmployeeController::class)->names('employee');
+    Route::resource('/schedule' , SchedulerController::class)->names('schedule');
 
 
     // water level
     Route::get('/update-water-level', [WaterLogController::class, 'updateWaterLog']);
+
+    // schedule
 
 });
 
