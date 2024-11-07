@@ -1,18 +1,28 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <x-layout>
+    <div class="grid grid-cols-3 gap-4 m-4 p-2">
 
-    <!-- water level -->
-    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <div>
-            <h1>Water Level</h1>
+        <!-- water level -->
+        <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div>
+                <h1>Water Level</h1>
+            </div>
+            <div>
+                <canvas id="waterLevelChart"></canvas>
+            </div>
         </div>
-        <div>
-            <canvas id="waterLevelChart"></canvas>
+        <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <h3>Current Water Level:</h3>
+            <p id="water-level">Loading ...</p>
+            <h3>Incoming water rate</h3>
+            <p>...</p>
+            <h3>Outgoing water rate</h3>
+            <p>...</p>
         </div>
-    </div>
-    <div>
-        <h3>Current Water Level:</h3>
-        <p id="water-level">Loading ...</p>
+        <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <h3>Current Water Level:</h3>
+            <p id="water-level">Loading ...</p>
+        </div>
     </div>
 
     <!-- First JavaScript Portion: Initialize the Chart -->
