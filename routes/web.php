@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\StatisticsController;
+use App\Http\Controllers\Backend\WaterLogController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +43,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('/employee' , EmployeeController::class)->names('employee');
     Route::resource('/customer' , CustomerController::class)->names('customer');
 
+
+    // water level
+    Route::get('/update-water-level', [WaterLogController::class, 'updateWaterLog']);
 
 });
 

@@ -69,6 +69,22 @@
     <script src="https://flowbite.com/application-ui/demo/app.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
 
+    <!-- water level -->
+     <!-- water level js -->
+<script>
+    function updateWaterLevel() {
+        fetch('/update-water-level')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('water-level').textContent = data.current_level + ' liters';
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    // Update water level every second
+    setInterval(updateWaterLevel, 1000);
+</script>
+
 </body>
 
 </html>

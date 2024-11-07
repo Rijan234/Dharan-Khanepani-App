@@ -1,11 +1,16 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <x-layout>
-  <div>
-    <canvas id="waterLevelChart"></canvas>
-  </div>
 
-  <script>
-        const availableWater = 60; // Available water in percentage
+    <!-- water level -->
+    <div>
+        <canvas id="waterLevelChart"></canvas>
+    </div>
+    <div>
+    <h3>Current Water Level:</h3>
+    <p id="water-level">Loading...</p>
+</div>
+    <script>
+        const availableWater = 80; // Available water in percentage
         const emptySpace = 100 - availableWater; // Remaining space
 
         const ctx = document.getElementById('waterLevelChart').getContext('2d');
@@ -17,7 +22,7 @@
                 datasets: [{
                     data: [availableWater, emptySpace],
                     backgroundColor: [
-                        'rgba(0, 150, 199, 0.8)',  // Water-like blue for available
+                        'rgba(0, 150, 199, 0.8)', // Water-like blue for available
                         'rgba(210, 235, 250, 0.6)' // Light blue-gray for empty space
                     ],
                     hoverBackgroundColor: [
@@ -48,6 +53,10 @@
             }
         });
     </script>
+
+    
+
+
 
 
 </x-layout>
