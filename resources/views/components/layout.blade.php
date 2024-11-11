@@ -77,7 +77,11 @@
                 .then(response => response.json())
                 .then(data => {
                     const currentLevel = data.current_level;
+                    const incoming_rate = data.incoming_rate;
+                    const outgoing_rate = data.outgoing_rate;
                     document.getElementById('water-level').textContent = currentLevel + ' liters';
+                    document.getElementById('incoming-rate').textContent = incoming_rate;
+                    document.getElementById('outgoing-rate').textContent = outgoing_rate;
 
                     // Calculate available water percentage and empty space
                     availableWater = (currentLevel / 1600000) * 100; // Assuming 1,600,000 is the tank's max capacity
@@ -86,12 +90,17 @@
                     // Update chart data
                     waterLevelChart.data.datasets[0].data = [availableWater, emptySpace];
                     waterLevelChart.update();
+
+
+                    // to show time
+                    const time = (currentLevel/1000)/(outgoing_rate*3.6);
+                    document.getElementById('water-lasting-time').textContent = time.toFixed(2) + ' hours';
                 })
                 .catch(error => console.error('Error:', error));
         }
 
         // Update water level every second
-        setInterval(updateWaterLevel, 1000);
+        setInterval(updateWaterLevel, 100000);
     </script>
 
     

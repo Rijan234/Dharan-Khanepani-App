@@ -15,13 +15,13 @@
             <h3>Current Water Level:</h3>
             <p id="water-level">Loading ...</p>
             <h3>Incoming water rate</h3>
-            <p>...</p>
+            <p id="incoming-rate">...</p>
             <h3>Outgoing water rate</h3>
-            <p>...</p>
+            <p id="outgoing-rate">...</p>
         </div>
         <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <h3>Current Water Level:</h3>
-            <p id="water-level">Loading ...</p>
+            <h3>Water will last upto:</h3>
+            <p id="water-lasting-time">Loading ...</p>
         </div>
     </div>
 

@@ -23,6 +23,10 @@ class WaterLogController extends Controller
     $waterLog->current_level = $newLevel;
     $waterLog->save();
 
-    return response()->json(['current_level' => $newLevel]);
+    return response()->json([
+        'current_level' => $newLevel,
+        'incoming_rate' =>$waterLog->incoming_rate,
+        'outgoing_rate' =>$waterLog->outgoing_rate,
+    ]);
 }
 }
