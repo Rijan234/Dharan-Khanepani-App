@@ -23,7 +23,9 @@
             <h3>Water will last upto:</h3>
             <p id="water-lasting-time">Loading ...</p>
         </div>
+        
     </div>
+
 
     <!-- First JavaScript Portion: Initialize the Chart -->
     <script>

@@ -33,7 +33,7 @@ class ApiController extends Controller
             // Login successful
             return response()->json([
                 'message' => 'Login successful',
-                'user' => $user,  // Optional: you can return some user data here if needed
+                // 'user' => $user,  // Optional: you can return some user data here if needed
             ], 200);
         }
 
