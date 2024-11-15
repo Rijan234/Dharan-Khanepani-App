@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Routine;
+use App\Models\Schedule;
 use Illuminate\Http\Request;
 
 class SchedulerController extends Controller
@@ -14,7 +15,8 @@ class SchedulerController extends Controller
     public function index()
     {
         $photo = Routine::latest()->first();
-        return view('schedule.index', compact('photo'));
+        $schedules = Schedule::all();
+        return view('schedule.index', compact('photo','schedules'));
     }
 
     /**
@@ -30,7 +32,14 @@ class SchedulerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $schedule = new Schedule();
+        $schedule->ward= $request->ward;
+        $schedule->tole= $request->tole;
+        $schedule->from= $request->from;
+        $schedule->to= $request->to;
+        $schedule->save();
+        return redirect()->back();
+
     }
 
     /**
