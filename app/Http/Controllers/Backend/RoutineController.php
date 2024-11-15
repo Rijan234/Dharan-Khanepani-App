@@ -5,16 +5,16 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Routine;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 
-class SchedulerController extends Controller
+class RoutineController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $photo = Routine::latest()->first();
-        return view('schedule.index', compact('photo'));
+        //
     }
 
     /**
@@ -30,7 +30,15 @@ class SchedulerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $photo = new Routine();
+          // Handle file upload for employee photo
+          if ($request->hasFile('routine_photo')) {
+            uploadImage($request, $photo, 'routine_photo');
+        }
+        $photo->save();
+        return redirect()->back();
+
+
     }
 
     /**
