@@ -5,13 +5,12 @@ return [
 
 'allowed_methods' => ['*'], // All methods (GET, POST, PUT, DELETE)
 
-'allowed_origins' => [
-    'http://localhost:3000',  // Local development for mobile apps
-    'https://yourapp.com',    // Your production domain
-],
+'allowed_origins' => ['*'],
+
 
 'allowed_headers' => [
     'Content-Type',
+    'X-Requested-With', 
     'Authorization',
 ],
 

@@ -22,6 +22,7 @@ return new class extends Migration {
     $table->enum('ward_no', ['Ward-7', 'Ward-8', 'Ward-15']);
     $table->string('tole');
     $table->string('customer_photo')->nullable();
+    $table->longText('api_token')->nullable();
     $table->timestamps();
         });
 
