@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\EmployeeController;
+use App\Http\Controllers\Backend\InboxController;
 use App\Http\Controllers\Backend\RoutineController;
 use App\Http\Controllers\Backend\ScheduleController as BackendScheduleController;
 use App\Http\Controllers\Backend\SchedulerController;
@@ -48,6 +49,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/employee' , EmployeeController::class)->names('employee');
     Route::resource('/schedule' , SchedulerController::class)->names('schedule');
     Route::resource('/routine', RoutineController::class)->names('routine');
+    Route::resource('/inbox', InboxController::class)->names('inbox');
 
 
     // water level
