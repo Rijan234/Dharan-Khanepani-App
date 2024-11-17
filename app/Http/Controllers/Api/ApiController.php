@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Customer;
+use App\Models\Schedule;
 use App\Models\TestRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str; // Add this for random token generation
@@ -41,8 +42,8 @@ class ApiController extends Controller
             $token = Str::random(60);
 
             // Optionally store the token in the database if you want to track it
-            // $user->api_token = hash('sha256', $token); // Store a hashed version for security
-            // $user->save();
+            $user->api_token = hash('sha256', $token); // Store a hashed version for security
+            $user->save();
 
             // Login successful
             return response()->json([
@@ -54,5 +55,30 @@ class ApiController extends Controller
 
         // Invalid credentials
         return response()->json(['message' => 'Invalid credentials'], 401);
+    }
+
+    public function getSchedule(Request $request)
+    {
+        // Validate the request
+        $request->validate([
+            'api_token' => 'required|string',
+        ]);
+
+        // Find the customer using the API token
+        $customer = Customer::where('api_token', $request->api_token)->first();
+
+        if (!$customer) {
+            return response()->json(['error' => 'Invalid API token.'], 404);
+        }
+
+        // Fetch the schedules matching the customer's `tole` and `ward_no`
+        $schedules = Schedule::where('tole', $customer->tole)
+            ->where('ward', $customer->ward_no)
+            ->get();
+
+        return response()->json([
+            // 'customer' => $customer->only(['customer_first_name', 'customer_last_name', 'tole']),
+            'schedules' => $schedules,
+        ]);
     }
 }

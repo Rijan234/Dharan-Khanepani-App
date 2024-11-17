@@ -9,3 +9,4 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::post('mobile-login', [ApiController::class, 'checkCredentials']);
+Route::get('mobile-schedule', [ApiController::class, 'getSchedule']);
