@@ -1,13 +1,15 @@
 <?php
 
+use App\Http\Controllers\Backend\BillController;
+use App\Http\Controllers\Backend\BillingController ;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\InboxController;
 use App\Http\Controllers\Backend\RoutineController;
-use App\Http\Controllers\Backend\ScheduleController as BackendScheduleController;
 use App\Http\Controllers\Backend\SchedulerController;
 use App\Http\Controllers\Backend\StatisticsController;
 use App\Http\Controllers\Backend\WaterLogController;
+
 use App\Http\Controllers\HelpController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ScheduleController;
@@ -52,12 +54,14 @@ Route::middleware('auth')->group(function () {
     Route::resource('/routine', RoutineController::class)->names('routine');
     Route::resource('/inbox', InboxController::class)->names('inbox');
     Route::resource('/help', HelpController::class)->names('help');
+    Route::resource('/billing', BillController::class)->names('billing');
 
 
     // water level
     Route::get('/update-water-level', [WaterLogController::class, 'updateWaterLog']);
 
-    // schedule
+    // search customer
+    Route::get('/test-search', [BillingController::class, 'search'])->name('test-search');
 
 });
 

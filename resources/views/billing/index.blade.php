@@ -61,81 +61,61 @@
                 </form>
 
                 <div id="search-results" class="mt-4">
-                    <!-- START SEARCH RESULTS -->
-                    @if(isset($customers))
-                    @if($customers->isNotEmpty())
-                    <div class="relative overflow-x-auto">
-                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">customer first name</th>
-                                    <th scope="col" class="px-6 py-3">meter id</th>
-                                    <th scope="col" class="px-6 py-3">tole</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($customers as $customer)
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 t-row hover:bg-gray-100 cursor-pointer customer-row"
-                                    id="customer-{{ $customer->id }}">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        {{ $customer->customer_first_name }}
-                                    </th>
-                                    <td class="px-6 py-4">{{ $customer->meter_id }}</td>
-                                    <td class="px-6 py-4">{{ $customer->tole }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                    @else
-                    <p>No customers found.</p>
-                    @endif
-                    @endif
-                    <!-- END SEARCH RESULTS -->
+
                 </div>
             </div>
 
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script>
-                $(document).ready(function() {
-                    // Handle input change for live search
-                    $('#search').on('input', function() {
-                        var query = $(this).val();
+        <script>
+            $(document).ready(function() {
+    // Handle input change for live search
+    $('#search').on('input', function() {
+        var query = $(this).val();
 
-                        if (query.length > 0) {
-                            $.ajax({
-                                url: "{{ route('test-search') }}",
-                                method: 'GET',
-                                data: {
-                                    query: query
-                                },
-                                success: function(response) {
-                                    // Update the search results container
-                                    $('#search-results').html(response.html);
-                                },
-                                error: function() {
-                                    console.error('Error fetching search results.');
-                                }
-                            });
-                        } else {
-                            $('#search-results').empty();
-                        }
-                    });
+        if (query.length > 0) {
+            $.ajax({
+                url: "{{ route('test-search') }}",
+                method: 'GET',
+                data: {
+                    query: query
+                },
+                success: function(response) {
+                    // Update the search results container
+                    $('#search-results').html(response.html);
+                },
+                error: function() {
+                    console.error('Error fetching search results.');
+                }
+            });
+        } else {
+            $('#search-results').empty();
+        }
+    });
 
-                    // Handle row click to populate the input with both first and last names
-                    $(document).on('click', '.customer-row', function() {
-                        // Extract the customer's first and last name from the clicked row
-                        var firstName = $(this).find('th').text(); // Assuming the first name is in the first <th> cell
-                        var lastName = $(this).find('td').eq(1).text(); // Assuming the last name is in the second <td> cell (you can adjust this based on your layout)
+    // Handle row click to populate the input and modal form with full name and other details
+    $(document).on('click', '.customer-row', function() {
+        var firstName = $(this).data('first-name');
+        var lastName = $(this).data('last-name');
+        var meterId = $(this).find('td').eq(1).text();  // Get the meter ID from the second column
+        var tole = $(this).find('td').eq(2).text();  // Get the tole from the third column
+        var wardNo = '';  // Assuming wardNo is not available in the search results, you'll need to add it from the database if required.
 
-                        // Set the search input with the full name (first + last name)
-                        $('#search').val(firstName + ' ' + lastName);
+        // Set the search input with the full name (first + last name)
+        $('#search').val(firstName + ' ' + lastName);
 
-                        // Optionally, clear the search results
-                        $('#search-results').empty();
-                    });
-                });
-            </script>
+        // Populate the modal form with customer data
+        $('#customer_first_name').val(firstName);
+        $('#customer_last_name').val(lastName);
+        $('#meter_id').val(meterId);
+        $('#tole').val(tole);
+        $('#ward_no').val(wardNo);  // Make sure to update this if the data is available
+
+        // Optionally, clear the search results
+        $('#search-results').empty();
+    });
+});
+
+        </script>
 
 
 
