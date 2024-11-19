@@ -1,45 +1,143 @@
 <x-layout>
-    
-<h1>Demands</h1>
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" class="px-6 py-3">
-                    Tole
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Ward
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Demand
-                </th>
-              
-                <th scope="col" class="px-6 py-3">
-                    Action
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($wards as $ward)
-            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {{ $ward->tole_name }}
-                </th>
-                <td class="px-6 py-4">
-                    {{ $ward->ward_no }}
-                </td>
-                <td class="px-6 py-4">
-                    {{ $ward->rate }}
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td>
-            </tr>
-            @endforeach
-        
-        </tbody>
-    </table>
-</div>
+
+
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 p-6 bg-gray-50 rounded-lg shadow">
+        <!-- Incoming Rate Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h1 class="text-xl font-semibold text-gray-800 mb-4">Incoming Rate</h1>
+            @if(isset($rate->incoming_rate))
+            <h4 class="text-2xl text-gray-700 font-bold mb-4">{{ $rate->incoming_rate }}</h4>
+            @else
+            <h4 class="text-2xl text-gray-400 italic mb-4">Not available</h4>
+            @endif
+            <a href="#" class="editToggle" data-target="incomingRate">Edit</a>
+
+            <div class="incomingRate rateForm" style="display: none;">
+                <form action="{{ route('statistics.update', $rate->id) }}" method="post">
+                    @csrf
+                    @method('put')
+                    <h1>Incoming Rate</h1>
+                    <input type="text" name="incoming_rate" id="" value="{{ $rate->incoming_rate }}">
+                    <button class="submit">Update</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Outgoing Rate Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h1 class="text-xl font-semibold text-gray-800 mb-4">Outgoing Rate</h1>
+            @if(isset($rate->outgoing_rate))
+            <h4 class="text-2xl text-gray-700 font-bold mb-4">{{ $rate->outgoing_rate }}</h4>
+            @else
+            <h4 class="text-2xl text-gray-400 italic mb-4">Not available</h4>
+            @endif
+            <a href="#" class="editToggle" data-target="outgoingRate">Edit</a>
+
+            <div class="outgoingRate rateForm" style="display: none;">
+                <form action="{{ route('statistics.update', $rate->id) }}" method="post">
+                    @csrf
+                    @method('put')
+                    <h1>Outgoing Rate</h1>
+                    <input type="text" name="outgoing_rate" id="" value="{{ $rate->outgoing_rate }}">
+                    <button class="submit">Update</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const editLinks = document.querySelectorAll(".editToggle");
+
+                editLinks.forEach(link => {
+                    link.addEventListener("click", function(event) {
+                        event.preventDefault(); // Prevent default anchor behavior
+
+                        const targetClass = this.getAttribute("data-target");
+                        const targetDiv = document.querySelector(`.${targetClass}`);
+
+                        if (targetDiv.style.display === "none") {
+                            targetDiv.style.display = "block";
+                        } else {
+                            targetDiv.style.display = "none";
+                        }
+                    });
+                });
+            });
+        </script>
+
+    </div>
+
+    <div class="container">
+        <h1>Customer Statistics</h1>
+
+        <!-- First chart: Ward-wise Data -->
+        <h3>Ward-wise Customer Count</h3>
+        <canvas id="wardChart" width="400" height="200"></canvas>
+
+        <!-- Second chart: Tole-wise Data under each Ward -->
+        <h3>Tole-wise Customer Count (Under each Ward)</h3>
+        <canvas id="toleChart" width="400" height="200"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // Fetch data from the backend using AJAX
+        $.getJSON('/data', function(data) {
+
+            // First Chart: Ward-wise Customer Count
+            var wardCtx = document.getElementById('wardChart').getContext('2d');
+            var wardChart = new Chart(wardCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Ward-7', 'Ward-8', 'Ward-15'],
+                    datasets: [{
+                        label: 'Customer Count (Ward-wise)',
+                        data: [data.ward7, data.ward8, data.ward15],
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Second Chart: Tole-wise Customer Count under each Ward
+            var toleCtx = document.getElementById('toleChart').getContext('2d');
+            var toleChart = new Chart(toleCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Tole 7A', 'Tole 7B', 'Tole 7C', 'Tole 8A', 'Tole 8B', 'Tole 15A', 'Tole 15B', 'Tole 15C'],
+                    datasets: [{
+                        label: 'Customer Count (Tole-wise)',
+                        data: [
+                            data.tole7A, data.tole7B, data.tole7C,
+                            data.tole8A, data.tole8B, data.tole15A,
+                            data.tole15B, data.tole15C
+                        ],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 
 </x-layout>

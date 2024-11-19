@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\BillController;
-use App\Http\Controllers\Backend\BillingController ;
+use App\Http\Controllers\Backend\BillingController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\InboxController;
@@ -21,19 +21,19 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('test');
 });
- Route::get('/login',function(){
+Route::get('/login', function () {
     return view('login');
- });
+});
 
- Route::get('/learnmore',function(){
+Route::get('/learnmore', function () {
     return view('learnmore');
- });
-Route::get('/app',function(){
+});
+Route::get('/app', function () {
     return view('layout/app');
 });
 #creating route to redirect user to view 'register.blade.php' to register a new accont
 
-Route::get('/register',function(){
+Route::get('/register', function () {
     return view('register');
 });
 
@@ -46,11 +46,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    
-    Route::resource('/statistics' , StatisticsController::class)->names('statistics');
-    Route::resource('/customer' , CustomerController::class)->names('customer');
-    Route::resource('/employee' , EmployeeController::class)->names('employee');
-    Route::resource('/schedule' , SchedulerController::class)->names('schedule');
+
+    Route::resource('/statistics', StatisticsController::class)->names('statistics');
+    Route::resource('/customer', CustomerController::class)->names('customer');
+    Route::resource('/employee', EmployeeController::class)->names('employee');
+    Route::resource('/schedule', SchedulerController::class)->names('schedule');
     Route::resource('/routine', RoutineController::class)->names('routine');
     Route::resource('/inbox', InboxController::class)->names('inbox');
     Route::resource('/help', HelpController::class)->names('help');
@@ -62,7 +62,8 @@ Route::middleware('auth')->group(function () {
 
     // search customer
     Route::get('/test-search', [BillingController::class, 'search'])->name('test-search');
-
+    // for chartjs
+    Route::get('/data', [BillingController::class, 'getCustomerData']);
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
