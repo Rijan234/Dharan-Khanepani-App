@@ -23,7 +23,7 @@
             </div>
             <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2">
 
-                <button id="toggleSidebarMobileSearch" type="button" class="FJRldeiG2gFGZfuKgp88 PeR2JZ9BZHYIH8Ea3F36 mveJTCIb2WII7J4sY22F F34pkf_DAj2DlPtfAEMV ZnBoTVi7VOJdCLSSU62n _7KA5gD55t2lxf9Jkj20 XIIs8ZOri3wm8Wnj9N_y OPrb_iG5WDy_7F05BDOX dMTOiA3mf3FTjlHu6DqW">
+                <!-- <button id="toggleSidebarMobileSearch" type="button" class="FJRldeiG2gFGZfuKgp88 PeR2JZ9BZHYIH8Ea3F36 mveJTCIb2WII7J4sY22F F34pkf_DAj2DlPtfAEMV ZnBoTVi7VOJdCLSSU62n _7KA5gD55t2lxf9Jkj20 XIIs8ZOri3wm8Wnj9N_y OPrb_iG5WDy_7F05BDOX dMTOiA3mf3FTjlHu6DqW">
                     <span class="_DVAfiyo21kM68EUVzEQ">Search</span>
 
                     <svg class="YIUegm7fh_CpJbivTu6B MnxxlQlR1H0xJuMEE8Yr" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -133,7 +133,7 @@
                     <svg class="YIUegm7fh_CpJbivTu6B MnxxlQlR1H0xJuMEE8Yr" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
                     </svg>
-                </button>
+                </button> -->
 
                 <div class="_SmdlCf6eUKB_V9S5IDj wBVMFkIGfrKshbvi2gS1 bXWhrLpoBVu4aMI8XQxr Jq3rRDG6Hsr3eAZ0KJeH aJF41JQLhtfw_MCGt5Th ZhzOGpbwY0R4TKKYr5pG d3C8uAdJKNl1jzfE9ynq xdunzYpzbwcYs_0Tjgcz _Ybd3WwuTVljUT4vEaM3 Y3FxyuXtj2gecrGXvLEI Zy1Pypi71Xu6guex6urN z30cepEEBLSTPSvWeVPH cl0mFvgyErwMYM5aRkru jqg6J89cvxmDiFpnV56r PoeKYEQfG4WfmL9xM6vu" id="apps-dropdown">
                     <div class="_Vb9igHms0hI1PQcvp_S b9aD6g2qw84oyZNsMO8j RZmKBZs1E1eXw8vkE6jY d3C8uAdJKNl1jzfE9ynq ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id rYHHksRBEMl_guI3q0UQ jtAJHOc7mn7b4IKRO59D jqg6J89cvxmDiFpnV56r XIIs8ZOri3wm8Wnj9N_y">
@@ -198,7 +198,7 @@
                         </a>
                     </div>
                 </div>
-                <button id="theme-toggle" data-tooltip-target="tooltip-toggle" type="button" class="PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y _7KA5gD55t2lxf9Jkj20 OPrb_iG5WDy_7F05BDOX BkIbg_JwkgiyRW804Hhu _dylIDxYTN3qgvD4U597 _6wdnQrxT_dGdAdNk5AQ yChACvAr1v8czJ2VO22j mveJTCIb2WII7J4sY22F c8dCx6gnV43hTOLV6ks5 olxDi3yL6f0gpdsOFDhx">
+                <!-- <button id="theme-toggle" data-tooltip-target="tooltip-toggle" type="button" class="PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y _7KA5gD55t2lxf9Jkj20 OPrb_iG5WDy_7F05BDOX BkIbg_JwkgiyRW804Hhu _dylIDxYTN3qgvD4U597 _6wdnQrxT_dGdAdNk5AQ yChACvAr1v8czJ2VO22j mveJTCIb2WII7J4sY22F c8dCx6gnV43hTOLV6ks5 olxDi3yL6f0gpdsOFDhx">
                     <svg id="theme-toggle-dark-icon" class="_SmdlCf6eUKB_V9S5IDj ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                     </svg>
@@ -209,7 +209,7 @@
                 <div id="tooltip-toggle" role="tooltip" class="VPGGthdu3cy_ZP7AL7dt pq2JRWtiWcwYnw3xueNl ZBSHeVK3dmgzHTRX3hLO QhmQ_v3mmDFIP9VaVOfb b9aD6g2qw84oyZNsMO8j _Cj_M6jt2eLjDgkBBNgI c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe y6GKdvUrd7vp_pxsFb57 foDHZclRWUf2bqma2a8U mveJTCIb2WII7J4sY22F fzhbbDQ686T8arwvi_bJ Db4Wzva4DMepJJiQLY7M mc9bwhBTHL8mVzJvl6gz rqOAGYeDo9iWuroePkaf H78G_4yayxs5C3xdFbnK">
                     Toggle dark mode
                     <div class="tkX8MMO2MiTlgtbd_jG3" data-popper-arrow=""></div>
-                </div>
+                </div> -->
 
                 <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 oA7zcT_42jVeFuWTXQnq">
                     <div>
