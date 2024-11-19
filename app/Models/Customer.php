@@ -26,4 +26,14 @@ class Customer extends Model
     {
         return $this->hasMany(Schedule::class, 'tole', 'tole'); // Match 'tole' in both tables.
     }
+
+    /**
+     * Get all of the bills for the Customer
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function bills()
+    {
+        return $this->hasMany(Bill::class);
+    }
 }

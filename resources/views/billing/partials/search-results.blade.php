@@ -5,18 +5,26 @@
             <tr>
                 <th scope="col" class="px-6 py-3">Customer Name</th>
                 <th scope="col" class="px-6 py-3">Meter ID</th>
-                <th scope="col" class="px-6 py-3">Tole</th>
+                <th scope="col" class="px-6 py-3">Phone</th>
             </tr>
         </thead>
         <tbody>
             @foreach($customers as $customer)
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 t-row hover:bg-gray-100 cursor-pointer customer-row" data-first-name="{{ $customer->customer_first_name }}" data-last-name="{{ $customer->customer_last_name }}">
-                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    <a href="#">{{ $customer->customer_first_name }} {{ $customer->customer_last_name }}</a>
-                </td>
-                <td class="px-6 py-4">{{ $customer->meter_id }}</td>
-                <td class="px-6 py-4">{{ $customer->tole }}</td>
-            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 t-row hover:bg-gray-100 cursor-pointer customer-row" 
+    data-first-name="{{ $customer->customer_first_name }}" 
+    data-last-name="{{ $customer->customer_last_name }}" 
+    data-meter-id="{{ $customer->meter_id }}" 
+    data-ward-no="{{ $customer->ward_no }}" 
+    data-tole="{{ $customer->tole }}" 
+    data-phone-number="{{ $customer->phone_number }}"
+    data-customer-id="{{ $customer->customer_id }}">
+    <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+        <a href="#">{{ $customer->customer_first_name }} {{ $customer->customer_last_name }}</a>
+    </td>
+    <td class="px-6 py-4">{{ $customer->meter_id }}</td>
+    <td class="px-6 py-4">{{ $customer->phone_number }}</td>
+</tr>
+
             @endforeach
         </tbody>
     </table>

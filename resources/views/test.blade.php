@@ -28,7 +28,7 @@
     </div>
 
     <!-- Modal -->
-    <div id="newBillModal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center">
+    <div id="newBillModal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center overflow-y-auto ">
         <div class="bg-white rounded-lg shadow-lg p-6 w-3/4 ">
             <!-- Modal Header -->
             <div class="flex justify-between items-center mb-4">
@@ -52,46 +52,26 @@
                     <input type="date" name="date" id="date" value="{{ $currentDate }}" disabled class="border p-2">
                 </div>
             </div>
-            <div>
-                <form id="search-form" class="max-w-md mx-auto " action="{{ route('test-search') }}" method="GET">
-                    <label for="">Customer Name</label>
-                    <div class="relative">
-                        <input type="text" id="search" name="query" autocomplete="off" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="customer name or phone" />
+            <!-- customer -->
+            <div class="">
+                <form id="search-form" class="mt-2" action="{{ route('test-search') }}" method="GET">
+                    <div class="flex items-center space-x-2">
+                        <h1 class="mr-2">Customer Name:</h1>
+                        <div class="relative">
+                            <input
+                                type="text"
+                                id="search"
+                                name="query"
+                                autocomplete="off"
+                                class=" px-2 py-1"
+                                placeholder="meter id or phone" />
+                        </div>
                     </div>
+
                 </form>
 
                 <div id="search-results" class="mt-4">
-                    <!-- START SEARCH RESULTS -->
-                    @if(isset($customers))
-                    @if($customers->isNotEmpty())
-                    <div class="relative overflow-x-auto">
-                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">customer first name</th>
-                                    <th scope="col" class="px-6 py-3">meter id</th>
-                                    <th scope="col" class="px-6 py-3">tole</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($customers as $customer)
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 t-row hover:bg-gray-100 cursor-pointer customer-row"
-                                    id="customer-{{ $customer->id }}">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        {{ $customer->customer_first_name }}
-                                    </th>
-                                    <td class="px-6 py-4">{{ $customer->meter_id }}</td>
-                                    <td class="px-6 py-4">{{ $customer->tole }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                    @else
-                    <p>No customers found.</p>
-                    @endif
-                    @endif
-                    <!-- END SEARCH RESULTS -->
+
                 </div>
             </div>
 
@@ -122,14 +102,26 @@
                         }
                     });
 
-                    // Handle row click to populate the input with both first and last names
+                    // Handle row click to populate the input and modal form with full name and other details
                     $(document).on('click', '.customer-row', function() {
-                        // Extract the customer's first and last name from the clicked row
-                        var firstName = $(this).find('th').text(); // Assuming the first name is in the first <th> cell
-                        var lastName = $(this).find('td').eq(1).text(); // Assuming the last name is in the second <td> cell (you can adjust this based on your layout)
+                        // Extract data from the clicked row
+                        var firstName = $(this).data('first-name');
+                        var lastName = $(this).data('last-name');
+                        var meterId = $(this).data('meter-id');
+                        var wardNo = $(this).data('ward-no');
+                        var tole = $(this).data('tole');
+                        var phoneNumber = $(this).data('phone-number');
 
                         // Set the search input with the full name (first + last name)
                         $('#search').val(firstName + ' ' + lastName);
+
+                        // Populate the modal form fields
+                        $('#customer_first_name').val(firstName);
+                        $('#customer_last_name').val(lastName);
+                        $('#meter_id').val(meterId);
+                        $('#ward_no').val(wardNo);
+                        $('#tole').val(tole);
+                        $('#phone_number').val(phoneNumber);
 
                         // Optionally, clear the search results
                         $('#search-results').empty();
@@ -137,30 +129,78 @@
                 });
             </script>
 
+            <!-- enter the previous and current reading -->
+            <div class="d-flex">
+                <div class="mb-4">
+                    <label for="previous_reading" class="block text-sm font-medium text-gray-700">Previous Reading</label>
+                    <input type="number" id="previous_reading" name="previous_reading" class="mt-1 w-1/2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
+                </div>
+                <div class="mb-4">
+                    <label for="reading_value" class="block text-sm font-medium text-gray-700">Current Reading</label>
+                    <input type="number" id="reading_value" name="reading_value" class="mt-1 w-1/2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
+                </div>
+                <div class="mb-4">
+                    <label for="calculated_value" class="block text-sm font-medium text-gray-700">Total Amount</label>
+                    <input type="text" id="calculated_value" name="calculated_value" class="mt-1 w-1/2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" readonly>
+                </div>
+            </div>
 
+            <script>
+                // Function to handle the dynamic calculation
+                function calculate() {
+                    const previousReading = parseFloat(document.getElementById('previous_reading').value);
+                    const currentReading = parseFloat(document.getElementById('reading_value').value);
+
+                    if (!isNaN(previousReading) && !isNaN(currentReading)) {
+                        // Calculate the difference and multiply by 30
+                        const difference = currentReading - previousReading;
+                        const calculatedValue = difference * 30;
+
+                        // Display the result in the calculated_value input field
+                        document.getElementById('calculated_value').value = calculatedValue;
+                    } else {
+                        // Clear the result if inputs are invalid
+                        document.getElementById('calculated_value').value = '';
+                    }
+                }
+
+                // Event listeners to trigger calculation dynamically
+                document.getElementById('previous_reading').addEventListener('input', calculate);
+                document.getElementById('reading_value').addEventListener('input', calculate);
+            </script>
 
 
             <!-- Modal Body -->
             <form id="waterBillForm">
-                <div class="mb-4">
-                    <label for="customer_first_name" class="block text-sm font-medium text-gray-700">Customer First Name</label>
-                    <input type="text" id="customer_first_name" name="customer_first_name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
-                </div>
-                <div class="mb-4">
-                    <label for="customer_last_name" class="block text-sm font-medium text-gray-700">Customer Last Name</label>
-                    <input type="text" id="customer_last_name" name="customer_last_name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
+                <div>
+                    <div class="mb-4">
+                        <label for="customer_first_name" class="block text-sm font-medium text-gray-700">Customer First Name</label>
+                        <input type="text" id="customer_first_name" name="customer_first_name" class="mt-1 block w-1/2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="customer_last_name" class="block text-sm font-medium text-gray-700">Customer Last Name</label>
+                        <input type="text" id="customer_last_name" name="customer_last_name" class="mt-1 block w-1/2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled required>
+                    </div>
                 </div>
                 <div class="mb-4">
                     <label for="meter_id" class="block text-sm font-medium text-gray-700">Meter Number</label>
-                    <input type="text" id="meter_id" name="meter_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
+                    <input type="text" id="meter_id" name="meter_id" class="mt-1 block w-1/2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled required>
                 </div>
                 <div class="mb-4">
                     <label for="ward_no" class="block text-sm font-medium text-gray-700">Ward No</label>
-                    <input type="text" id="ward_no" name="ward_no" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
+                    <input type="text" id="ward_no" name="ward_no" class="mt-1 block w-1/2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled required>
                 </div>
                 <div class="mb-4">
                     <label for="tole" class="block text-sm font-medium text-gray-700">Tole</label>
-                    <input type="text" id="tole" name="tole" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
+                    <input type="text" id="tole" name="tole" class="mt-1 block w-1/2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled required>
+                </div>
+                <div class="mb-4">
+                    <label for="phone_number" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                    <input type="text" id="phone_number" name="phone_number" class="mt-1 block w-1/2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled required>
+                </div>
+                <div>
+                    <h1>Amount per unit : Rs 30</h1>
+                    <h1>Total amount: <span id="total_amount">Rs </span></h1>
                 </div>
                 <div class="flex justify-end">
                     <button type="submit" class="text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
@@ -171,6 +211,7 @@
         </div>
     </div>
 
+    <!-- modal -->
     <script>
         // Modal Elements
         const newBillButton = document.getElementById('newBillButton');
@@ -195,7 +236,9 @@
         });
     </script>
 
+    <script>
 
+    </script>
 
 
 </x-layout>

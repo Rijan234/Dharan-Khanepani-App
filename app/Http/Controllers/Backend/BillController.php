@@ -14,10 +14,12 @@ class BillController extends Controller
      */
     public function index()
     {
+        // $bills = Bill::all();
+        $bills = Bill::with('customers')->get();
         // $customers = Customer::all();
         $no_of_bills = Bill::count() + 1;
         $currentDate = now()->format('Y-m-d');
-        return view('billing.index', compact('no_of_bills', 'currentDate'));
+        return view('billing.index', compact('no_of_bills', 'currentDate','bills'));
     }
 
     /**
@@ -33,7 +35,20 @@ class BillController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $bill = new Bill();
+        $bill->customer_id = $request->customer_id;
+        $bill->bill_no = $request->bill_no;
+        $bill->meter_id = $request->meter_id;
+        $bill->reading_date = $request->reading_date;
+        $bill->reading_value = $request->reading_value;
+        $bill->previous_reading = $request->previous_reading;
+        // Remove "Rs " from total_amount if present
+    $bill->total_amount = preg_replace('/[^\d.]/', '', $request->total_amount);
+
+
+        $bill->save();
+        return redirect()->back();
+
     }
 
     /**
