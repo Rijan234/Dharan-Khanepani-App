@@ -1,118 +1,180 @@
-<!-- Modal -->
-<div id="newBillModal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center overflow-y-auto">
-    <div class="bg-white rounded-lg shadow-lg p-8 w-3/4 md:w-2/3 lg:w-1/2">
-        <!-- Modal Header -->
-        <div class="flex justify-between items-center mb-6 border-b pb-4">
-            <h2 class="text-xl font-semibold text-gray-800">New Water Bill</h2>
-            <button id="closeModalButton" class="text-gray-500 hover:text-gray-700">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<x-layout>
+<div class="min-h-screen bg-gray-100 p-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Water Level Chart Section -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <div class="flex items-center mb-4">
+                <svg class="w-8 h-8 text-blue-500 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 6h18M3 14h18M3 18h18M3 22h18"/>
                 </svg>
-            </button>
-        </div>
-
-        <!-- Bill Info -->
-        <div class="grid grid-cols-2 gap-4 mb-6">
-            <div class="flex items-center space-x-2">
-                <h1 class="text-sm font-medium text-gray-700">Bill No:</h1>
-                @if(!empty($no_of_bills))
-                <input type="number" name="bill_no" id="bill_no" placeholder="{{ $no_of_bills }}" value="{{ $no_of_bills }}" disabled class="border p-2 rounded-md text-gray-700">
-                @endif
+                <h2 class="text-xl font-semibold text-gray-800">Water Level</h2>
             </div>
-            <div class="flex items-center space-x-2">
-                <h1 class="text-sm font-medium text-gray-700">Date:</h1>
-                <input type="date" name="date" id="date" value="{{ $currentDate }}" disabled class="border p-2 rounded-md text-gray-700">
+            <div class="relative">
+                <canvas id="waterLevelChart"></canvas>
             </div>
         </div>
 
-        <!-- Customer Info -->
-        <div class="border-t pt-6">
-            <h3 class="text-lg font-medium text-gray-800">Customer Information</h3>
-            <form id="search-form" class="mt-4" action="{{ route('test-search') }}" method="GET">
-                <div class="flex items-center space-x-2">
-                    <h1 class="mr-2 text-sm font-medium text-gray-700">Customer Name:</h1>
-                    <input type="text" id="search" name="query" autocomplete="off" class="px-3 py-2 border rounded-md shadow-sm text-gray-700" placeholder="Meter ID or Phone Number" />
+        <!-- Current Water Info Section -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Current Water Info</h3>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <p class="text-gray-600">Water Level</p>
+                    <p id="water-level" class="font-medium text-gray-800">Loading...</p>
                 </div>
-            </form>
-            <div id="search-results" class="mt-4"></div>
-
-            <!-- Populate customer data -->
-            <div class="grid grid-cols-2 gap-4 mt-4">
-                <div>
-                    <label for="customer_first_name" class="block text-sm font-medium text-gray-700">First Name</label>
-                    <input type="text" id="customer_first_name" name="customer_first_name" class="mt-1 w-full rounded-md border-gray-300 shadow-sm" disabled required>
+                <div class="flex items-center justify-between">
+                    <p class="text-gray-600">Incoming Rate</p>
+                    <p id="incoming-rate" class="font-medium text-gray-800">...</p>
                 </div>
-                <div>
-                    <label for="customer_last_name" class="block text-sm font-medium text-gray-700">Last Name</label>
-                    <input type="text" id="customer_last_name" name="customer_last_name" class="mt-1 w-full rounded-md border-gray-300 shadow-sm" disabled required>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 gap-4 mt-4">
-                <div>
-                    <label for="meter_id" class="block text-sm font-medium text-gray-700">Meter Number</label>
-                    <input type="text" id="meter_id" name="meter_id" class="mt-1 w-full rounded-md border-gray-300 shadow-sm" disabled required>
-                </div>
-                <div>
-                    <label for="ward_no" class="block text-sm font-medium text-gray-700">Ward No</label>
-                    <input type="text" id="ward_no" name="ward_no" class="mt-1 w-full rounded-md border-gray-300 shadow-sm" disabled required>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 gap-4 mt-4">
-                <div>
-                    <label for="tole" class="block text-sm font-medium text-gray-700">Tole</label>
-                    <input type="text" id="tole" name="tole" class="mt-1 w-full rounded-md border-gray-300 shadow-sm" disabled required>
-                </div>
-                <div>
-                    <label for="phone_number" class="block text-sm font-medium text-gray-700">Phone Number</label>
-                    <input type="text" id="phone_number" name="phone_number" class="mt-1 w-full rounded-md border-gray-300 shadow-sm" disabled required>
+                <div class="flex items-center justify-between">
+                    <p class="text-gray-600">Outgoing Rate</p>
+                    <p id="outgoing-rate" class="font-medium text-gray-800">...</p>
                 </div>
             </div>
         </div>
 
-        <!-- Reading Info -->
-        <div class="border-t pt-6 mt-6">
-            <h3 class="text-lg font-medium text-gray-800">Reading Information</h3>
-            <div class="grid grid-cols-2 gap-4 mt-4">
-                <div>
-                    <label for="previous_reading" class="block text-sm font-medium text-gray-700">Previous Reading</label>
-                    <input type="number" id="previous_reading" name="previous_reading" class="mt-1 w-full rounded-md border-gray-300 shadow-sm" required>
-                </div>
-                <div>
-                    <label for="reading_value" class="block text-sm font-medium text-gray-700">Current Reading</label>
-                    <input type="number" id="reading_value" name="reading_value" class="mt-1 w-full rounded-md border-gray-300 shadow-sm" required>
-                </div>
-            </div>
-            <div class="mt-4">
-                <label for="calculated_value" class="block text-sm font-medium text-gray-700">Total Amount</label>
-                <input type="text" id="calculated_value" name="calculated_value" class="mt-1 w-full rounded-md border-gray-300 shadow-sm" readonly>
+        <!-- Water Lasting Time Section -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Water Lasting Time</h3>
+            <div class="flex items-center justify-between">
+                <p class="text-gray-600">Estimated Time</p>
+                <p id="water-lasting-time" class="font-medium text-gray-800">Loading...</p>
             </div>
         </div>
 
-        <!-- Amount Calculation Script -->
-        <script>
-            function calculate() {
-                const previousReading = parseFloat(document.getElementById('previous_reading').value);
-                const currentReading = parseFloat(document.getElementById('reading_value').value);
-
-                if (!isNaN(previousReading) && !isNaN(currentReading)) {
-                    const difference = currentReading - previousReading;
-                    const calculatedValue = difference * 30;
-                    document.getElementById('calculated_value').value = `Rs ${calculatedValue}`;
-                } else {
-                    document.getElementById('calculated_value').value = '';
-                }
-            }
-
-            document.getElementById('previous_reading').addEventListener('input', calculate);
-            document.getElementById('reading_value').addEventListener('input', calculate);
-        </script>
-
-        <!-- Submit Button -->
-        <div class="flex justify-end mt-6">
-            <button type="submit" class="px-6 py-3 bg-indigo-600 text-white text-sm font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
-                Submit Bill
-            </button>
+        <!-- Overflow Section -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Overflow Status</h2>
+                <div class="flex justify-between">
+                    <p class="text-gray-600">Current Status</p>
+                    <p class="text-red-500 font-bold">Empty</p>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Overflow Rate</h3>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <span class="text-xs font-semibold inline-block py-1 uppercase">0%</span>
+                            <span class="text-xs font-semibold inline-block py-1 uppercase">100%</span>
+                        </div>
+                        <div class="flex mb-2">
+                            <div class="w-full bg-gray-300 rounded-full">
+                                <div class="bg-red-500 text-xs font-medium text-center p-0.5 leading-none rounded-l-full" style="width: 10%;"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Customer Stats Section -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Customer & Staff Stats</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <p class="text-gray-600">Total Customers</p>
+                    <p class="font-medium text-gray-800">33</p>
+                </div>
+                <div>
+                    <p class="text-gray-600">Total Staff</p>
+                    <p class="font-medium text-gray-800">5</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Revenue Section -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Revenue</h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <p class="text-gray-600">Total Revenue</p>
+                    <p class="font-medium text-gray-800">Rs 30,000</p>
+                </div>
+                <div class="flex items-center justify-between">
+                    <p class="text-gray-600">Total Enquiries</p>
+                    <p class="font-medium text-gray-800">23</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity Section -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 col-span-1 md:col-span-2">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Recent Activity</h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <p class="text-gray-600">Last Water Level Check</p>
+                    <p class="font-medium text-gray-800">10 mins ago</p>
+                </div>
+                <div class="flex items-center justify-between">
+                    <p class="text-gray-600">Last Enquiry</p>
+                    <p class="font-medium text-gray-800">15 mins ago</p>
+                </div>
+                <div class="flex items-center justify-between">
+                    <p class="text-gray-600">Last Revenue Update</p>
+                    <p class="font-medium text-gray-800">1 hour ago</p>
+                </div>
+            </div>
+        </div>
+        
     </div>
+
+    <!-- Footer -->
+    <footer class="mt-8 bg-white p-4 rounded-2xl shadow-lg text-center text-gray-600">
+        <p>&copy; 2024 Water Supply Dashboard. All rights reserved.</p>
+    </footer>
 </div>
 
+
+
+
+    <!-- First JavaScript Portion: Initialize the Chart -->
+    <script>
+        // Placeholder for initial values
+        let availableWater = 0;
+        let emptySpace = 100;
+
+        const ctx = document.getElementById('waterLevelChart').getContext('2d');
+        const waterLevelChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Available Water', 'Empty Space'],
+                datasets: [{
+                    data: [availableWater, emptySpace],
+                    backgroundColor: [
+                        'rgba(0, 150, 199, 0.8)', // Water-like blue for available
+                        'rgba(210, 235, 250, 0.6)' // Light blue-gray for empty space
+                    ],
+                    hoverBackgroundColor: [
+                        'rgba(0, 128, 170, 0.9)', // Darker blue on hover
+                        'rgba(200, 225, 240, 0.7)' // Lighter gray-blue on hover
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = context.raw || 0;
+                                return `${label}: ${value.toFixed(2)}%`; // Limit to two decimal places
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+</x-layout>

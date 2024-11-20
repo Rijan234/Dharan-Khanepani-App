@@ -136,32 +136,81 @@
         </div>
 
         <div>
-        <table class="table-auto w-full border-collapse border border-gray-300">
-    <thead class="bg-gray-100">
-        <tr>
-            <th class="border border-gray-300 px-4 py-2">Tole</th>
-            <th class="border border-gray-300 px-4 py-2">Ward</th>
-            <th class="border border-gray-300 px-4 py-2">From</th>
-            <th class="border border-gray-300 px-4 py-2">To</th>
-            <th class="border border-gray-300 px-4 py-2">Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($schedules as $schedule)
-            <tr class="hover:bg-gray-50">
-                <td class="border border-gray-300 px-4 py-2">{{ $schedule->tole }}</td>
-                <td class="border border-gray-300 px-4 py-2">{{ $schedule->ward }}</td>
-                <td class="border border-gray-300 px-4 py-2">{{ $schedule->from }}</td>
-                <td class="border border-gray-300 px-4 py-2">{{ $schedule->to }}</td>
-                <td class="border border-gray-300 px-4 py-2 text-blue-500 cursor-pointer hover:underline">Edit</td>
-            </tr>
-        @endforeach
-    </tbody>
-</table>
+            <table class="table-auto w-full border-collapse border border-gray-300">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="border border-gray-300 px-4 py-2">Tole</th>
+                        <th class="border border-gray-300 px-4 py-2">Ward</th>
+                        <th class="border border-gray-300 px-4 py-2">From</th>
+                        <th class="border border-gray-300 px-4 py-2">To</th>
+                        <th class="border border-gray-300 px-4 py-2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($schedules as $schedule)
+                    <tr class="hover:bg-gray-50">
+                        <td class="border border-gray-300 px-4 py-2">{{ $schedule->tole }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ $schedule->ward }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ $schedule->from }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ $schedule->to }}</td>
+                        <td class="border border-gray-300 px-4 py-2 text-blue-500 cursor-pointer hover:underline">Edit</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
 
         </div>
 
     </div>
+    
+    @if (session('success'))
+    @php
+        // Determine message type and assign corresponding colors
+        $message = session('success');
+        $bgColor = '';
+        $borderColor = '';
+        $textColor = '';
+        $heading = '';
+
+        if (str_contains($message, 'created')) {
+        $bgColor = 'bg-green-100';
+        $borderColor = 'border-green-400';
+        $textColor = 'text-green-700';
+        $heading = 'Created!';
+        } elseif (str_contains($message, 'uploaded')) {
+        $bgColor = 'bg-blue-100';
+        $borderColor = 'border-blue-400';
+        $textColor = 'text-blue-700';
+        $heading = 'Uploaded!';
+        } elseif (str_contains($message, 'deleted')) {
+        $bgColor = 'bg-red-100';
+        $borderColor = 'border-red-400';
+        $textColor = 'text-red-700';
+        $heading = 'Deleted!';
+        }
+    @endphp
+
+    <div
+        id="success-message"
+        class="fixed bottom-0 right-0 m-4 {{ $bgColor }} {{ $borderColor }} {{ $textColor }} px-4 py-3 rounded shadow-lg"
+        role="alert">
+        <strong class="font-bold">{{ $heading }}</strong>
+        <span class="block sm:inline">{{ $message }}</span>
+    </div>
+
+    <script>
+        // Auto-dismiss the message after 3 seconds
+        setTimeout(() => {
+            const message = document.getElementById('success-message');
+            if (message) {
+                message.style.transition = "opacity 0.5s ease-out";
+                message.style.opacity = "0";
+                setTimeout(() => message.remove(), 500); // Remove after fade-out
+            }
+        }, 3000);
+    </script>
+    @endif
+
 
     <script>
         // Function to open the modal with the image

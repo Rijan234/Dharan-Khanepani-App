@@ -93,8 +93,9 @@
 
 
                     // to show time
-                    const time = (currentLevel/100000)/(outgoing_rate*3.6);
+                    const time = (currentLevel/1000)/(outgoing_rate*3.6);
                     document.getElementById('water-lasting-time').textContent = time.toFixed(2) + ' hours';
+                    // document.getElementById('water-lasting-time').textContent = time.toFixed(2) + ' hours';
                 })
                 .catch(error => console.error('Error:', error));
         }

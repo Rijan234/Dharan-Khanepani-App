@@ -74,6 +74,54 @@
         </button>
     </div>
 
+    @if (session('success'))
+        @php
+            // Determine message type and assign corresponding colors
+            $message = session('success');
+            $bgColor = '';
+            $borderColor = '';
+            $textColor = '';
+            $heading = '';
+
+            if (str_contains($message, 'created')) {
+            $bgColor = 'bg-green-100';
+            $borderColor = 'border-green-400';
+            $textColor = 'text-green-700';
+            $heading = 'Created!';
+            } elseif (str_contains($message, 'updated')) {
+            $bgColor = 'bg-blue-100';
+            $borderColor = 'border-blue-400';
+            $textColor = 'text-blue-700';
+            $heading = 'Updated!';
+            } elseif (str_contains($message, 'deleted')) {
+            $bgColor = 'bg-red-100';
+            $borderColor = 'border-red-400';
+            $textColor = 'text-red-700';
+            $heading = 'Deleted!';
+            }
+        @endphp
+
+        <div
+            id="success-message"
+            class="fixed bottom-0 right-0 m-4 {{ $bgColor }} {{ $borderColor }} {{ $textColor }} px-4 py-3 rounded shadow-lg"
+            role="alert">
+            <strong class="font-bold">{{ $heading }}</strong>
+            <span class="block sm:inline">{{ $message }}</span>
+        </div>
+
+        <script>
+            // Auto-dismiss the message after 3 seconds
+            setTimeout(() => {
+                const message = document.getElementById('success-message');
+                if (message) {
+                    message.style.transition = "opacity 0.5s ease-out";
+                    message.style.opacity = "0";
+                    setTimeout(() => message.remove(), 500); // Remove after fade-out
+                }
+            }, 3000);
+        </script>
+    @endif
+
 
     <!-- Modal -->
     <div id="newBillModal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center overflow-y-auto">

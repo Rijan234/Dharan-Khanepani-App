@@ -36,7 +36,7 @@ class RoutineController extends Controller
             uploadImage($request, $photo, 'routine_photo');
         }
         $photo->save();
-        return redirect()->back();
+        return redirect()->back()->with('success','Routine  uploaded successfully');
 
 
     }

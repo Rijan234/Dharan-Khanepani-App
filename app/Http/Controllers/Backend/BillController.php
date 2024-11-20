@@ -47,7 +47,7 @@ class BillController extends Controller
 
 
         $bill->save();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Bill was created successfully');
 
     }
 

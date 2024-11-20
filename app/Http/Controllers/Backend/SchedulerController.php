@@ -38,7 +38,7 @@ class SchedulerController extends Controller
         $schedule->from= $request->from;
         $schedule->to= $request->to;
         $schedule->save();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Schedule created successfully');
 
     }
 

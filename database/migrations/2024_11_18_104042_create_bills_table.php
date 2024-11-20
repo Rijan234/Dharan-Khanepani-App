@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('bills', function (Blueprint $table) {
             $table->id();
             $table->foreignId('customer_id');
+            $table->string('bill_no');
             $table->string('meter_id');
             $table->date('reading_date');
             $table->decimal('reading_value', 10);
