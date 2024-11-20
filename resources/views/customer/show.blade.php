@@ -4,32 +4,24 @@
             <nav class="YRrCJSr_j5nopfm4duUc Td37IMFwOi4Zt3Vhv3cT" aria-label="Breadcrumb">
                 <ol class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 R0X5VtiZIoV7IjvrxBJ_ hPWJir4VhLurUkdR8iyI">
                     <li class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2">
-                        <a href="#" class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 rYHHksRBEMl_guI3q0UQ ZnBoTVi7VOJdCLSSU62n EJIoL6514Ry8r7nh011L dMTOiA3mf3FTjlHu6DqW">
-                            <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG T1qzIiYBzxDgBnL9ISMF" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-                            </svg>
-                            Home
-                        </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+</svg>
+
+                            Customer
                     </li>
+                   
                     <li>
                         <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2">
                             <svg class="YIUegm7fh_CpJbivTu6B MnxxlQlR1H0xJuMEE8Yr _JmTNv5EiHqK2A1jcQSf" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <a href="#" class="c2LzVf9SsdSEMBrRjNwS c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe rYHHksRBEMl_guI3q0UQ ZnBoTVi7VOJdCLSSU62n EbR_B0tHyczsKYnc0ktU EJIoL6514Ry8r7nh011L dMTOiA3mf3FTjlHu6DqW">Users</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2">
-                            <svg class="YIUegm7fh_CpJbivTu6B MnxxlQlR1H0xJuMEE8Yr _JmTNv5EiHqK2A1jcQSf" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="c2LzVf9SsdSEMBrRjNwS c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe _JmTNv5EiHqK2A1jcQSf EbR_B0tHyczsKYnc0ktU qIT6vrYn0Fr1U3wlPXaS" aria-current="page">Settings</span>
+                            <span class="c2LzVf9SsdSEMBrRjNwS c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe _JmTNv5EiHqK2A1jcQSf EbR_B0tHyczsKYnc0ktU qIT6vrYn0Fr1U3wlPXaS" aria-current="page">Show</span>
                         </div>
                     </li>
                 </ol>
             </nav>
-            <h1 class="vyo_A8gnQD1QWDPglr3h yM_AorRf2jSON3pDsdrz __9sbu0yrzdhGIkLWNXl NdexIDe6BTJXjtSnppoV OyABRrnTV_kvHV7dJ0uE">Edit Customer</h1>
+            <h1 class="vyo_A8gnQD1QWDPglr3h yM_AorRf2jSON3pDsdrz __9sbu0yrzdhGIkLWNXl NdexIDe6BTJXjtSnppoV OyABRrnTV_kvHV7dJ0uE">Profile</h1>
         </div>
         <!-- Right Content -->
        
@@ -143,39 +135,7 @@
                     </div>
 
                 </div>
-                <!-- <div class="_Ybd3WwuTVljUT4vEaM3 mngKhi_Rv06PF57lblDI mveJTCIb2WII7J4sY22F _wYiJGbRZyFZeCc8y7Sf _YxZw_O8dWkTljptcO7z SWDELhWFjL8JxEtm91_o _1jTZ8KXRZul60S6czNi hD0sTTDgbxakubcHVW2X">
-                            <h3 class="hD0sTTDgbxakubcHVW2X vyo_A8gnQD1QWDPglr3h IOPhczRgtphv6NdNBDjj OyABRrnTV_kvHV7dJ0uE">Password information</h3>
-                            <form action="#">
-                                <div class="xCPtuxM4_gihvpPwv9bX xcwgeeZbzBfzbYbc32HH Bcw8VuwRWYxPGjWjS6Ig">
-                                    <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                        <label for="current-password" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Current password</label>
-                                        <input type="text" name="current-password" id="current-password" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" placeholder="••••••••" required="">
-                                    </div>
-                                    <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                        <label for="new-password" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">New password</label>
-                                        <input type="text" name="new-password" id="new-password" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" placeholder="••••••••" required="">
-                                    </div>
-                                    <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                        <label for="confirm-password" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Confirm password</label>
-                                        <input type="text" name="confirm-password" id="confirm-password" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" placeholder="••••••••" required="">
-                                    </div>
-                                    <div class="EWLTGduHCjFnjN6tLCXV">
-                                        <div class="c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe OyABRrnTV_kvHV7dJ0uE">Password requirements:</div>
-                                        <div class="Z3N7I2IDDsoXK6xJ1cSW c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">Ensure that these requirements are met:</div>
-                                        <ul class="LTEDJh4s7gPtSmaVhWcH wezTbYJgxYJp5ZDqX67N PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">
-                                            <li class="gMXmdpOPfqG_3CKkL0VD _43MO1gcdi2Y0RJW1uHL">At least 10 characters (and up to 100 characters)</li>
-                                            <li class="gMXmdpOPfqG_3CKkL0VD _43MO1gcdi2Y0RJW1uHL">At least one lowercase character</li>
-                                            <li class="gMXmdpOPfqG_3CKkL0VD _43MO1gcdi2Y0RJW1uHL">Inclusion of at least one special character, e.g., ! @ # ?</li>
-                                            <li class="gMXmdpOPfqG_3CKkL0VD _43MO1gcdi2Y0RJW1uHL">Some text here zoltan</li>
-                                        </ul>
-                                    </div>
-                                    <div class="_P4crYcwEj3d10LO5o8N sm:col-full">
-                                        <button class="y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F c8dCx6gnV43hTOLV6ks5 ZjWEEmDsdPvU2GdH53LK cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM" type="submit">Save all</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div> -->
-
+           
             </div>
        
     </div>

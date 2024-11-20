@@ -153,7 +153,7 @@
                         <td class="border border-gray-300 px-4 py-2">{{ $schedule->ward }}</td>
                         <td class="border border-gray-300 px-4 py-2">{{ $schedule->from }}</td>
                         <td class="border border-gray-300 px-4 py-2">{{ $schedule->to }}</td>
-                        <td class="border border-gray-300 px-4 py-2 text-blue-500 cursor-pointer hover:underline">Edit</td>
+                        <td class="border border-gray-300 px-4 py-2 text-blue-500 cursor-pointer hover:underline"><a href="{{ route('schedule.edit', $schedule->id ) }}">Edit</a></td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -177,11 +177,11 @@
         $borderColor = 'border-green-400';
         $textColor = 'text-green-700';
         $heading = 'Created!';
-        } elseif (str_contains($message, 'uploaded')) {
+        } elseif (str_contains($message, 'updated')) {
         $bgColor = 'bg-blue-100';
         $borderColor = 'border-blue-400';
         $textColor = 'text-blue-700';
-        $heading = 'Uploaded!';
+        $heading = 'Updated!';
         } elseif (str_contains($message, 'deleted')) {
         $bgColor = 'bg-red-100';
         $borderColor = 'border-red-400';

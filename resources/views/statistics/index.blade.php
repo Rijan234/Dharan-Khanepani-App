@@ -69,64 +69,73 @@
     </div>
 
     @if (session('success'))
-        @php
-            // Determine message type and assign corresponding colors
-            $message = session('success');
-            $bgColor = '';
-            $borderColor = '';
-            $textColor = '';
-            $heading = '';
+    @php
+    // Determine message type and assign corresponding colors
+    $message = session('success');
+    $bgColor = '';
+    $borderColor = '';
+    $textColor = '';
+    $heading = '';
 
-            if (str_contains($message, 'created')) {
-            $bgColor = 'bg-green-100';
-            $borderColor = 'border-green-400';
-            $textColor = 'text-green-700';
-            $heading = 'Created!';
-            } elseif (str_contains($message, 'updated')) {
-            $bgColor = 'bg-blue-100';
-            $borderColor = 'border-blue-400';
-            $textColor = 'text-blue-700';
-            $heading = 'Updated!';
-            } elseif (str_contains($message, 'deleted')) {
-            $bgColor = 'bg-red-100';
-            $borderColor = 'border-red-400';
-            $textColor = 'text-red-700';
-            $heading = 'Deleted!';
+    if (str_contains($message, 'created')) {
+    $bgColor = 'bg-green-100';
+    $borderColor = 'border-green-400';
+    $textColor = 'text-green-700';
+    $heading = 'Created!';
+    } elseif (str_contains($message, 'updated')) {
+    $bgColor = 'bg-blue-100';
+    $borderColor = 'border-blue-400';
+    $textColor = 'text-blue-700';
+    $heading = 'Updated!';
+    } elseif (str_contains($message, 'deleted')) {
+    $bgColor = 'bg-red-100';
+    $borderColor = 'border-red-400';
+    $textColor = 'text-red-700';
+    $heading = 'Deleted!';
+    }
+    @endphp
+
+    <div
+        id="success-message"
+        class="fixed bottom-0 right-0 m-4 {{ $bgColor }} {{ $borderColor }} {{ $textColor }} px-4 py-3 rounded shadow-lg"
+        role="alert">
+        <strong class="font-bold">{{ $heading }}</strong>
+        <span class="block sm:inline">{{ $message }}</span>
+    </div>
+
+    <script>
+        // Auto-dismiss the message after 3 seconds
+        setTimeout(() => {
+            const message = document.getElementById('success-message');
+            if (message) {
+                message.style.transition = "opacity 0.5s ease-out";
+                message.style.opacity = "0";
+                setTimeout(() => message.remove(), 500); // Remove after fade-out
             }
-        @endphp
-
-        <div
-            id="success-message"
-            class="fixed bottom-0 right-0 m-4 {{ $bgColor }} {{ $borderColor }} {{ $textColor }} px-4 py-3 rounded shadow-lg"
-            role="alert">
-            <strong class="font-bold">{{ $heading }}</strong>
-            <span class="block sm:inline">{{ $message }}</span>
-        </div>
-
-        <script>
-            // Auto-dismiss the message after 3 seconds
-            setTimeout(() => {
-                const message = document.getElementById('success-message');
-                if (message) {
-                    message.style.transition = "opacity 0.5s ease-out";
-                    message.style.opacity = "0";
-                    setTimeout(() => message.remove(), 500); // Remove after fade-out
-                }
-            }, 3000);
-        </script>
+        }, 3000);
+    </script>
     @endif
 
-    <div class="container">
-        <h1>Customer Statistics</h1>
+    <div class="container-fluid py-5">
+        <h1 class="text-center mb-5">Customer Statistics</h1>
 
-        <!-- First chart: Ward-wise Data -->
-        <h3>Ward-wise Customer Count</h3>
-        <canvas id="wardChart" width="400" height="200"></canvas>
+        <!-- Ward-wise Data -->
+        <section class="mb-5">
+            <h3 class="text-primary text-center mb-4">Ward-wise Customer Count</h3>
+            <div class="w-100">
+                <canvas id="wardChart" class="w-100" style="height: 400px;"></canvas>
+            </div>
+        </section>
 
-        <!-- Second chart: Tole-wise Data under each Ward -->
-        <h3>Tole-wise Customer Count (Under each Ward)</h3>
-        <canvas id="toleChart" width="400" height="200"></canvas>
+        <!-- Tole-wise Data -->
+        <section>
+            <h3 class="text-secondary text-center mb-4">Tole-wise Customer Count (Under each Ward)</h3>
+            <div class="w-100">
+                <canvas id="toleChart" class="w-100" style="height: 400px;"></canvas>
+            </div>
+        </section>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

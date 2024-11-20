@@ -55,7 +55,9 @@ class SchedulerController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $schedule = Schedule::find($id);
+        // return $schedule;
+        return view('schedule.edit', compact('schedule'));
     }
 
     /**
@@ -63,7 +65,11 @@ class SchedulerController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $schedule = Schedule::find($id);
+        $schedule->to=$request->to;
+        $schedule->from=$request->from;
+        $schedule->update();
+        return redirect()->route('schedule.index')->with('success', 'Schedule updated successfully');
     }
 
     /**

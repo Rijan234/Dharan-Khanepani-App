@@ -75,11 +75,11 @@
             <div class="grid grid-cols-2 gap-4">
                 <div>
                     <p class="text-gray-600">Total Customers</p>
-                    <p class="font-medium text-gray-800">33</p>
+                    <p class="font-medium text-gray-800" id="customers-no">...</p>
                 </div>
                 <div>
                     <p class="text-gray-600">Total Staff</p>
-                    <p class="font-medium text-gray-800">5</p>
+                    <p class="font-medium text-gray-800" id="employees-no">...</p>
                 </div>
             </div>
         </div>
@@ -90,7 +90,7 @@
             <div class="space-y-4">
                 <div class="flex items-center justify-between">
                     <p class="text-gray-600">Total Revenue</p>
-                    <p class="font-medium text-gray-800">Rs 30,000</p>
+                    <p class="font-medium text-gray-800" id="total-amount">...</p>
                 </div>
                 <div class="flex items-center justify-between">
                     <p class="text-gray-600">Total Enquiries</p>
@@ -99,24 +99,7 @@
             </div>
         </div>
 
-        <!-- Recent Activity Section -->
-        <div class="bg-white rounded-2xl shadow-lg p-6 col-span-1 md:col-span-2">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Recent Activity</h2>
-            <div class="space-y-4">
-                <div class="flex items-center justify-between">
-                    <p class="text-gray-600">Last Water Level Check</p>
-                    <p class="font-medium text-gray-800">10 mins ago</p>
-                </div>
-                <div class="flex items-center justify-between">
-                    <p class="text-gray-600">Last Enquiry</p>
-                    <p class="font-medium text-gray-800">15 mins ago</p>
-                </div>
-                <div class="flex items-center justify-between">
-                    <p class="text-gray-600">Last Revenue Update</p>
-                    <p class="font-medium text-gray-800">1 hour ago</p>
-                </div>
-            </div>
-        </div>
+    
         
     </div>
 
@@ -173,10 +156,6 @@
                 }
             }
         });
-    </script>
-
-    <script>
-        
     </script>
 
 </x-layout>

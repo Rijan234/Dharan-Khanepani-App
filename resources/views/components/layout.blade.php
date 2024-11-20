@@ -79,10 +79,15 @@
                     const currentLevel = data.current_level;
                     const incoming_rate = data.incoming_rate;
                     const outgoing_rate = data.outgoing_rate;
+                    const customers = data.customers;
+                    const employees = data.employees;
+                    const total_amount = data.total_amount;
                     document.getElementById('water-level').textContent = currentLevel + ' liters';
                     document.getElementById('incoming-rate').textContent = incoming_rate;
                     document.getElementById('outgoing-rate').textContent = outgoing_rate;
-
+                    document.getElementById('customers-no').textContent = customers;
+                    document.getElementById('employees-no').textContent = employees;
+                    document.getElementById('total-amount').textContent = total_amount;
                     // Calculate available water percentage and empty space
                     availableWater = (currentLevel / 1600000) * 100; // Assuming 1,600,000 is the tank's max capacity
                     emptySpace = 100 - availableWater;
@@ -101,7 +106,7 @@
         }
 
         // Update water level every second
-        setInterval(updateWaterLevel, 100000);
+        setInterval(updateWaterLevel, 1000);
     </script>
 
     
