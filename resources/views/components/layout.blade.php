@@ -106,7 +106,7 @@
         }
 
         // Update water level every second
-        setInterval(updateWaterLevel, 1000);
+        setInterval(updateWaterLevel, 100000);
     </script>
 
     

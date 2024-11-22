@@ -1,96 +1,52 @@
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<x-layout>
-    <div class="grid grid-cols-3 gap-4 m-4 p-2">
+<x-guest-layout>
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
 
-        <!-- water level -->
-        <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <div>
-                <h1>Water Level</h1>
-            </div>
-            <div>
-                <canvas id="waterLevelChart"></canvas>
-            </div>
-        </div>
-        <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <h3>Current Water Level:</h3>
-            <p id="water-level">Loading ...</p>
-            <h3>Incoming water rate</h3>
-            <p id="incoming-rate">...</p>
-            <h3>Outgoing water rate</h3>
-            <p id="outgoing-rate">...</p>
-        </div>
-        <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <h3>Water will last upto:</h3>
-            <p id="water-lasting-time">Loading ...</p>
-        </div>
+        <!-- Name -->
         <div>
-            <div>
-                <h1>OverFlow</h1>
-                <h1>Empty</h1>
-            </div>
-            <div>
-                <h1>Total Customers</h1>
-                <p>33</p>
-                <h1>Total Staffs</h1>
-                <p>5</p>
-            </div>
-            <div>
-                <h1>Total Revenue</h1>
-                <p>Rs 30000</p>
-                <h1>Total Enquiry</h1>
-                <p>23</p>
-            </div>
+            <x-input-label for="name" :value="__('Name')" />
+            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
-        
-    </div>
 
+        <!-- Email Address -->
+        <div class="mt-4">
+            <x-input-label for="email" :value="__('Email')" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
 
-    <!-- First JavaScript Portion: Initialize the Chart -->
-    <script>
-        // Placeholder for initial values
-        let availableWater = 0;
-        let emptySpace = 100;
+        <!-- Password -->
+        <div class="mt-4">
+            <x-input-label for="password" :value="__('Password')" />
 
-        const ctx = document.getElementById('waterLevelChart').getContext('2d');
-        const waterLevelChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Available Water', 'Empty Space'],
-                datasets: [{
-                    data: [availableWater, emptySpace],
-                    backgroundColor: [
-                        'rgba(0, 150, 199, 0.8)', // Water-like blue for available
-                        'rgba(210, 235, 250, 0.6)' // Light blue-gray for empty space
-                    ],
-                    hoverBackgroundColor: [
-                        'rgba(0, 128, 170, 0.9)', // Darker blue on hover
-                        'rgba(200, 225, 240, 0.7)' // Lighter gray-blue on hover
-                    ]
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                cutout: '70%',
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'bottom',
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                const label = context.label || '';
-                                const value = context.raw || 0;
-                                return `${label}: ${value.toFixed(2)}%`; // Limit to two decimal places
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    </script>
+            <x-text-input id="password" class="block mt-1 w-full"
+                            type="password"
+                            name="password"
+                            required autocomplete="new-password" />
 
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        </div>
 
+        <!-- Confirm Password -->
+        <div class="mt-4">
+            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
 
-</x-layout>
+            <x-text-input id="password_confirmation" class="block mt-1 w-full"
+                            type="password"
+                            name="password_confirmation" required autocomplete="new-password" />
+
+            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        </div>
+
+        <div class="flex items-center justify-end mt-4">
+            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
+                {{ __('Already registered?') }}
+            </a>
+
+            <x-primary-button class="ms-4">
+                {{ __('Register') }}
+            </x-primary-button>
+        </div>
+    </form>
+</x-guest-layout>
