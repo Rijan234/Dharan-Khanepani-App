@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Inbox;
 use Illuminate\Http\Request;
 
 class InboxController extends Controller
@@ -12,8 +13,11 @@ class InboxController extends Controller
      */
     public function index()
     {
-        return view('inbox.index');
+        $inboxes = Inbox::with('customer')->orderBy('created_at', 'desc')->get();
+    
+        return view('inbox.index', compact('inboxes'));
     }
+    
 
     /**
      * Show the form for creating a new resource.

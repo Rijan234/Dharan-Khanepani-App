@@ -36,4 +36,14 @@ class Customer extends Model
     {
         return $this->hasMany(Bill::class);
     }
+
+    /**
+     * Get all of the comments for the Customer
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function inboxes()
+    {
+        return $this->hasMany(Inbox::class);
+    }
 }

@@ -48,10 +48,12 @@
 
         <div class="uLPch_bqyJDXwe5tynMV M1YFStHQ2scEHZzvz7XX NM7Z1HBVjN_86WhEcXan _wYiJGbRZyFZeCc8y7Sf _8jcPkGLarEkE2SxNmlU Td37IMFwOi4Zt3Vhv3cT qDsn8ha5_HppqMcLKJwF wBVMFkIGfrKshbvi2gS1 _lTTGxW9MVI40FyDCtmr ywL5uTZPlgVihxkmcsCL">
 
+            @foreach($inboxes as $inbox)
             <div class="_wYiJGbRZyFZeCc8y7Sf UYOSZJ1_pv3B5nt1ujCP _Ybd3WwuTVljUT4vEaM3 mveJTCIb2WII7J4sY22F mngKhi_Rv06PF57lblDI _1jTZ8KXRZul60S6czNi li3V2nWsIccF5bigdJK_ mLcQlleCsw78f8JnJ0rz wlDQu3XsiQM08HEeTqes">
                 <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 d4louhNic5PFgJGRKqn6">
                     <div class="VQS2tmQ_zFyBOC2tkmto">
-                        <img class="hlT3pgfpx11BUFMWNdhc Mln3CkDzLcoVQAC3Uqsd RpVwy4sO7Asb86CncKJ_" src="https://flowbite.com/application-ui/demo/images/users/neil-sims.png" alt="Neil Sims">
+                        <img class="hlT3pgfpx11BUFMWNdhc Mln3CkDzLcoVQAC3Uqsd RpVwy4sO7Asb86CncKJ_" src="{{ asset( $inbox->customer->customer_photo) }}" alt="Customer Photo">
+
                     </div>
                     <div class="_74lpPUMEtHf6F0_fjLe G4dLHP1O7x3gaD0_p7Kc">
                         <p class="c8dCx6gnV43hTOLV6ks5 yM_AorRf2jSON3pDsdrz __9sbu0yrzdhGIkLWNXl vfNYjqjYMlN1XskEucCt OyABRrnTV_kvHV7dJ0uE">Neil Sims</p>
@@ -80,12 +82,11 @@
                     </div>
                 </div>
                 <div class="UYOSZJ1_pv3B5nt1ujCP">
-                    <p class="d3C8uAdJKNl1jzfE9ynq _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">Hi @everyone, the new designs are attached. Go check them out and let me know if I missed anything. Thanks!</p>
+                    <p class="d3C8uAdJKNl1jzfE9ynq _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">{{ $inbox->description }}</p>
 
                     <div class="YRrCJSr_j5nopfm4duUc hP1M5IgfjJiY8_B1VUN1">
-                        <img class="fScvmu_bLBCkoXb3Xml3 oADHwEO31S0aPXWCcSfQ hD0sTTDgbxakubcHVW2X y7LTF_4HCOoAzmZm_v8k mveJTCIb2WII7J4sY22F" src="https://flowbite.com/application-ui/demo/images/feed/image-1.jpg" alt="task screenshot">
+                        <img class="w-full" src="{{ asset('storage/' . $inbox->photo_path) }}" alt="task screenshot">
 
-                        <img class="fScvmu_bLBCkoXb3Xml3 oADHwEO31S0aPXWCcSfQ hD0sTTDgbxakubcHVW2X y7LTF_4HCOoAzmZm_v8k mveJTCIb2WII7J4sY22F" src="https://flowbite.com/application-ui/demo/images/feed/image-2.jpg" alt="task screenshot">
                     </div>
 
                 </div>
@@ -95,7 +96,7 @@
                             <path fill-rule="evenodd" d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0ZM9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8h-1.5Z" clip-rule="evenodd" />
                         </svg>
                         &nbsp;
-                        Issue Type
+                        {{ $inbox->issue_type }}
                     </a>
                     <a href="#" class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe PeR2JZ9BZHYIH8Ea3F36 oJZU4OQzzfXeLbF7UKZ_ ZnBoTVi7VOJdCLSSU62n XIIs8ZOri3wm8Wnj9N_y dMTOiA3mf3FTjlHu6DqW">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
@@ -127,6 +128,7 @@
                 </div>
 
             </div>
+            @endforeach
 
             <div class="_wYiJGbRZyFZeCc8y7Sf UYOSZJ1_pv3B5nt1ujCP _Ybd3WwuTVljUT4vEaM3 mveJTCIb2WII7J4sY22F mngKhi_Rv06PF57lblDI _1jTZ8KXRZul60S6czNi li3V2nWsIccF5bigdJK_ mLcQlleCsw78f8JnJ0rz wlDQu3XsiQM08HEeTqes">
                 <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 d4louhNic5PFgJGRKqn6">
