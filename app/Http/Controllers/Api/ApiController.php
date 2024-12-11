@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Bill;
 use App\Models\Customer;
 use App\Models\Inbox;
 use App\Models\Schedule;
@@ -133,31 +134,24 @@ class ApiController extends Controller
         ]);
     }
 
-
-
-    // public function storeEnquiry(Request $request)
-    // {
-
-    //     // Find the customer using the API token
-    //     $customer = Customer::where('api_token', $request->api_token)->first();
-    //     if (!$customer) {
-    //         return response()->json(['error' => 'Invalid API token.'], 404);
-    //     }
-
-    //     $inbox = new Inbox();
-    //     $inbox->customer_id= $customer->customer_id;
-    //     $inbox->issue_type= $request->issueType;
-    //     $inbox->description= $request->description;
-    //        // Handle photo update if a new file is uploaded
-    //        if ($request->hasFile('photo')) {
-
-    //         // Store new photo
-    //         uploadImage($request, $inbox, 'photo');
-    //     }
-    //     $inbox->time= now();
-    //     $inbox->save();
-    //     return response()->json(['message' => 'Enquiry submitted successfully','customerId' => "$customer->customer_id"]);
-
-
-    // }
+    public function checkBill(Request $request) {
+        // Find the customer using the API token
+        $customer = Customer::where('api_token', $request->api_token)->first();
+    
+        // Check if the customer exists to prevent null reference errors
+        if (!$customer) {
+            return response()->json(['error' => 'Customer not found'], 404);
+        }
+    
+        // Get the customer's ID
+        $customerId = $customer->customer_id;
+    
+        // Retrieve all bills for the specific customer
+        $bills = Bill::where('customer_id', $customerId)->get();
+    
+        // Return the bills
+        return response()->json($bills);
+    }
+    
+    
 }

@@ -13,9 +13,14 @@ class InboxController extends Controller
      */
     public function index()
     {
+        $totalRequests= Inbox::count();
+        $pendingRequests = Inbox::where('status', 'pending')->count();
+        $followupRequests = Inbox::where('status', 'follow-up')->count();
+        $completedRequests = Inbox::where('status', 'completed')->count();
+        // return $totalRequests;
         $inboxes = Inbox::with('customer')->orderBy('created_at', 'desc')->get();
     
-        return view('inbox.index', compact('inboxes'));
+        return view('inbox.index', compact('inboxes', 'totalRequests', 'pendingRequests', 'followupRequests', 'completedRequests'));
     }
     
 
@@ -48,7 +53,11 @@ class InboxController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $follow_up="Follow-up";
+        $inbox= Inbox::find($id);
+        $inbox->status=$follow_up;
+        $inbox->update();
+        return redirect()->back();
     }
 
     /**
@@ -64,6 +73,8 @@ class InboxController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $inbox= Inbox::find($id);
+        $inbox->delete();
+        return redirect()->back();
     }
 }

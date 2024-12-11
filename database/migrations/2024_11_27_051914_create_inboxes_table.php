@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('customer_id');
             $table->enum('issue_type',['complain','leakage','others']);
-            $table->enum('status',['pending','follow-up','completed'])->nullable();
+            $table->enum('status',['pending','follow-up','completed'])->nullable()->default('pending');
             $table->longText('description');
             $table->string('photo_path')->nullable();
             $table->time('time');

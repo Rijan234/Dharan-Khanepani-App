@@ -47,24 +47,10 @@
         <!-- Overflow Section -->
         <div class="bg-white rounded-2xl shadow-lg p-6">
             <div class="mb-6">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">Overflow Status</h2>
-                <div class="flex justify-between">
-                    <p class="text-gray-600">Current Status</p>
-                    <p class="text-red-500 font-bold">Empty</p>
-                </div>
-                <div class="mt-4">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Overflow Rate</h3>
-                    <div class="relative pt-1">
-                        <div class="flex mb-2 items-center justify-between">
-                            <span class="text-xs font-semibold inline-block py-1 uppercase">0%</span>
-                            <span class="text-xs font-semibold inline-block py-1 uppercase">100%</span>
-                        </div>
-                        <div class="flex mb-2">
-                            <div class="w-full bg-gray-300 rounded-full">
-                                <div class="bg-red-500 text-xs font-medium text-center p-0.5 leading-none rounded-l-full" style="width: 10%;"> </div>
-                            </div>
-                        </div>
-                    </div>
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Enquiries</h2>
+                <div class="flex items-center justify-between">
+                    <p class="text-gray-600">Total Enquiries</p>
+                    <p class="font-medium text-gray-800">23</p>
                 </div>
             </div>
         </div>
@@ -92,10 +78,7 @@
                     <p class="text-gray-600">Total Revenue</p>
                     <p class="font-medium text-gray-800" id="total-amount">...</p>
                 </div>
-                <div class="flex items-center justify-between">
-                    <p class="text-gray-600">Total Enquiries</p>
-                    <p class="font-medium text-gray-800">23</p>
-                </div>
+               
             </div>
         </div>
 

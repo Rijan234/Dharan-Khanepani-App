@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\BillController;
 use App\Http\Controllers\Backend\BillingController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\EmployeeController;
+use App\Http\Controllers\Backend\EnquiryController;
 use App\Http\Controllers\Backend\InboxController;
 use App\Http\Controllers\Backend\RoutineController;
 use App\Http\Controllers\Backend\SchedulerController;
@@ -56,6 +57,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/test-search', [BillingController::class, 'search'])->name('test-search');
     // for chartjs
     Route::get('/data', [BillingController::class, 'getCustomerData']);
+
+    // enquiry request
+    Route::post('/enquiry/complete/{id}', [EnquiryController::class, 'complete'])->name('enquiry-complete');
+    Route::delete('/enquiry/destroy/{id}', [EnquiryController::class, 'destroy'])->name('enquiry-destroy');
+
 });
 
 require __DIR__ . '/auth.php';

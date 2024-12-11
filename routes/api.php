@@ -11,3 +11,4 @@ Route::get('/user', function (Request $request) {
 Route::post('mobile-login', [ApiController::class, 'checkCredentials']);
 Route::post('mobile-schedule', [ApiController::class, 'getSchedule']);
 Route::post('mobile-enquiry', [ApiController::class, 'storeEnquiry']);
+Route::post('mobile-bill', [ApiController::class, 'checkBill']);
