@@ -7,10 +7,10 @@
                 <nav class="YRrCJSr_j5nopfm4duUc Td37IMFwOi4Zt3Vhv3cT" aria-label="Breadcrumb">
                     <ol class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 R0X5VtiZIoV7IjvrxBJ_ hPWJir4VhLurUkdR8iyI">
                         <li class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2">
-                                <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG T1qzIiYBzxDgBnL9ISMF" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-                                </svg>
-                                Customers
+                            <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG T1qzIiYBzxDgBnL9ISMF" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                            </svg>
+                            Customers
                         </li>
                         <li>
                             <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2">
@@ -28,13 +28,13 @@
                 <div class="Q_jg_EPdNf9eDMn1mLI2 _SmdlCf6eUKB_V9S5IDj _hpGev6RXFut0Jm_iRgf rvdRhGyExrNYTA6euxsF om3BNuWld9UpFB3WzeiL lPgrNAFSq7M44sp_5uKw tkZo48dB4RhnHSlDXzoe XpuPpk9eXhVCrleKmXDr">
                 </div>
                 <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 zjZIaeYZzHaaBqxD5KzF EU43bH15DCmsqkGyVBGj SNt2jJ6mOxoWkDWNP3rs">
-                    <button type="button" data-modal-toggle="add-user-modal" class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU Ce_ecllpQM9Lc4yCjD_9 _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY mveJTCIb2WII7J4sY22F YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T icxWjIgUd9_dzYucx1nx d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM">
-                        <svg class="YIUegm7fh_CpJbivTu6B MnxxlQlR1H0xJuMEE8Yr fhCwost7CSNRc2WSHLFW ZEPNZzATe5nPnS0shmrF" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                    <button type="button" id="createUserButton" data-modal-target="createUserAccordionModal" data-modal-toggle="createUserAccordionModal" class="YRrCJSr_j5nopfm4duUc t6gkcSf0Bt4MLItXvDJ_ Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU mveJTCIb2WII7J4sY22F g40_g3BQzYCOX5eZADgY _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe y6GKdvUrd7vp_pxsFb57 YoPCmQ0E_V5W0GGmSIdm BkIbg_JwkgiyRW804Hhu _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM icxWjIgUd9_dzYucx1nx">
+                        <svg class="_Tk8743voA_rOget_8jS IRKzgyPj4qWOh2vq2xBg _o2IXcpM0qnG3JPReKus E9GV5sZJIbfO_GEQ_moc" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"></path>
                         </svg>
-                        Add Customer
+                        Add new user
                     </button>
-                  
+
                 </div>
             </div>
         </div>
@@ -152,107 +152,121 @@
 
 
 
-    <!-- Add User Modal -->
-    <div class="_LPVUrp9Uina5fcERqWC TYmpscr1PwuC1dpYXDpM ZjE1E_5ejL_PlLNIq3MM Jq3rRDG6Hsr3eAZ0KJeH Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU _SmdlCf6eUKB_V9S5IDj LQrvJzHhtGuotyv_EF_N _lTTGxW9MVI40FyDCtmr _lAzsNe8Mc9FYKCKyXJT k6hbvxXxe_du942IR0vX YEIqrYYZZnouxfWI2aiR NaQJIEi_uYbdAsDO0j69" id="add-user-modal">
-        <div class="ahOqFrhzLjivRe8a1kX_ t6gkcSf0Bt4MLItXvDJ_ uLPch_bqyJDXwe5tynMV TnCneWVBJS9LByVLKjZH RZmKBZs1E1eXw8vkE6jY IerQx_TrL55Lkoy6sBIE">
+
+    <!-- Create User Modal -->
+    <div id="createUserAccordionModal" tabindex="-1" aria-hidden="true" class="_LPVUrp9Uina5fcERqWC TYmpscr1PwuC1dpYXDpM ZjE1E_5ejL_PlLNIq3MM uQByIGHtHssL9HoPQXR4 Jq3rRDG6Hsr3eAZ0KJeH _SmdlCf6eUKB_V9S5IDj _dZO1Z7EjPZTzv7NappG D5X3kHheOzrTNzgpkKYX t6gkcSf0Bt4MLItXvDJ_ Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU _lTTGxW9MVI40FyDCtmr LQrvJzHhtGuotyv_EF_N k6hbvxXxe_du942IR0vX">
+        <div class="ahOqFrhzLjivRe8a1kX_ D5X3kHheOzrTNzgpkKYX t6gkcSf0Bt4MLItXvDJ_ TnCneWVBJS9LByVLKjZH _wYiJGbRZyFZeCc8y7Sf">
             <!-- Modal content -->
-            <div class="ahOqFrhzLjivRe8a1kX_ _Ybd3WwuTVljUT4vEaM3 mveJTCIb2WII7J4sY22F mngKhi_Rv06PF57lblDI _1jTZ8KXRZul60S6czNi">
+            <form action="{{ route('customer.store') }}" method="post" enctype="multipart/form-data" class="ahOqFrhzLjivRe8a1kX_ mveJTCIb2WII7J4sY22F _Ybd3WwuTVljUT4vEaM3 mngKhi_Rv06PF57lblDI _1jTZ8KXRZul60S6czNi">
+                @csrf
                 <!-- Modal header -->
-                <div class="YRrCJSr_j5nopfm4duUc _7_AEkSp_Gi6KH9ZW6st sJNGKHxFYdN5Nzml5J2j TcRv2CxEufCAnWVUJnDf EpUSgjHdM6oyMXUiK_8_ zQeL_bQRwh9WGEnvS5ug _fGhMnSfYmaGrv7DvZ00">
-                    <h3 class="vyo_A8gnQD1QWDPglr3h yM_AorRf2jSON3pDsdrz OyABRrnTV_kvHV7dJ0uE">
-                        Add new customer
-                    </h3>
-                    <button type="button" class="_JmTNv5EiHqK2A1jcQSf mW4LfSTbez3WHPeTDguY lBgPGkku8NiP5ReH09_2 ZnBoTVi7VOJdCLSSU62n mveJTCIb2WII7J4sY22F c8dCx6gnV43hTOLV6ks5 Z4DH5a4vmjReSFRBpPgz zjZIaeYZzHaaBqxD5KzF _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 OPrb_iG5WDy_7F05BDOX dMTOiA3mf3FTjlHu6DqW" data-modal-toggle="add-user-modal">
-                        <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 sJNGKHxFYdN5Nzml5J2j zQeL_bQRwh9WGEnvS5ug RZmKBZs1E1eXw8vkE6jY _9igzqn_6D3Qq5Hcwkfk _Ura23Qklq9Ri0XExDX2">
+                    <h3 class="y0nOgdpiqOUaFDbjAxwD yM_AorRf2jSON3pDsdrz __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Add new user</h3>
+                    <button type="button" class="zjZIaeYZzHaaBqxD5KzF _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 mveJTCIb2WII7J4sY22F mW4LfSTbez3WHPeTDguY Z4DH5a4vmjReSFRBpPgz c8dCx6gnV43hTOLV6ks5 _JmTNv5EiHqK2A1jcQSf _7KA5gD55t2lxf9Jkj20 ZnBoTVi7VOJdCLSSU62n RzANcaqunVvlLrO6_tal dMTOiA3mf3FTjlHu6DqW" data-modal-toggle="createUserAccordionModal">
+                        <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"></path>
                         </svg>
+                        <span class="_DVAfiyo21kM68EUVzEQ">Close modal</span>
                     </button>
                 </div>
-                <!-- Modal body -->
-                <form action="{{ route('customer.store') }}" method="post" enctype="multipart/form-data">
-                    <div class="IvHclGgvMLtYg_ow0uba qDsn8ha5_HppqMcLKJwF">
-                        @csrf
-                        <div class="xCPtuxM4_gihvpPwv9bX xcwgeeZbzBfzbYbc32HH Bcw8VuwRWYxPGjWjS6Ig">
-                            <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                <label for="first-name" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">First Name</label>
-                                <input type="text" name="first_name" id="first-name" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" placeholder="Ram" autocomplete="off" required="">
+                <div id="accordion-collapse-create-user" data-accordion="collapse">
+
+                    <div id="accordion-collapse-body-3" class="" aria-labelledby="accordion-collapse-heading-3">
+                        <div class="qUWbS_LTZujDB4XCd11V _wYiJGbRZyFZeCc8y7Sf _fGhMnSfYmaGrv7DvZ00 _aDtgllJkTzUlILozHgX">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="form-group">
+                                    <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
+                                    <input type="text" name="first_name" id="first-name" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-200 focus:outline-none" placeholder="Ram" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
+                                    <input type="text" name="last_name" id="last-name" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-200 focus:outline-none" placeholder="Rai" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="meter-id" class="block text-sm font-medium text-gray-700">Meter ID</label>
+                                    <input type="text" name="meter_id" id="meter-id" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-200 focus:outline-none" placeholder="015553" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone-number" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                    <input type="text" name="phone_number" id="phone-number" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-200 focus:outline-none" placeholder="" pattern="\d*" maxlength="10" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ward-no" class="block text-sm font-medium text-gray-700">Ward No</label>
+                                    <select name="ward_no" id="ward-no" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-200 focus:outline-none">
+                                        <option value="" disabled selected>Select Ward No</option>
+                                        <option value="Ward-7">Ward 7</option>
+                                        <option value="Ward-8">Ward 8</option>
+                                        <option value="Ward-15">Ward 15</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tole-name" class="block text-sm font-medium text-gray-700">Tole Name</label>
+                                    <select name="tole_name" id="tole-name" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-200 focus:outline-none">
+                                        <option value="" disabled selected>Select Tole</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="block text-sm font-medium text-gray-700" for="user_avatar">Select Photo</label>
+                                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" aria-describedby="user_avatar_help" id="user_avatar" name="customer_photo" type="file">
+                                </div>
                             </div>
-                            <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                <label for="last-name" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Last Name</label>
-                                <input type="text" name="last_name" id="last-name" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" placeholder="Rai" autocomplete="off" required="">
-                            </div>
-                            <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                <label for="meter-id" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Meter ID</label>
-                                <input type="meter-id" name="meter_id" id="meter-id" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" placeholder="015553" autocomplete="off" required="">
-                            </div>
-                            <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                <label for="phone-number" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Phone Number</label>
-                                <input type="text" name="phone_number" id="phone-number" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" placeholder="" pattern="\d*" maxlength="10" autocomplete="off" required="">
-                            </div>
-                            <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                <label for="ward-no" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Ward No</label>
-                                <select name="ward_no" id="ward-no" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5">
-                                    <option value="" disabled selected>Select Ward No</option>
-                                    <option value="Ward-7">Ward 7</option>
-                                    <option value="Ward-8">Ward 8</option>
-                                    <option value="Ward-15">Ward 15</option>
-                                </select>
-                            </div>
-                            <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
-                                <label for="tole-name" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Ward No</label>
-                                <select name="tole_name" id="tole-name" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5">
-                                    <option value="" disabled selected>Select Tole </option>
-
-
-                                </select>
-                            </div>
-
-                            <script>
-                                // Data: Mapping of Wards to their respective Tole names
-                                const toleData = {
-                                    "Ward-7": ["Tole 7A", "Tole 7B", "Tole 7C"],
-                                    "Ward-8": ["Tole 8A", "Tole 8B"],
-                                    "Ward-15": ["Tole 15A", "Tole 15B", "Tole 15C"]
-                                };
-
-                                // Elements
-                                const wardSelect = document.getElementById('ward-no');
-                                const toleSelect = document.getElementById('tole-name');
-
-                                // Function to populate Tole options based on selected Ward
-                                wardSelect.addEventListener('change', function() {
-                                    const selectedWard = this.value;
-
-                                    // Clear existing tole options
-                                    toleSelect.innerHTML = '<option value="" disabled selected>Select Tole</option>';
-
-                                    // Populate new options for the selected ward
-                                    if (toleData[selectedWard]) {
-                                        toleData[selectedWard].forEach(tole => {
-                                            const option = document.createElement('option');
-                                            option.value = tole;
-                                            option.textContent = tole;
-                                            toleSelect.appendChild(option);
-                                        });
-                                    }
-                                });
-                            </script>
                         </div>
-                        <div class="mt-4">
-                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="user_avatar">Select Photo</label>
-                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" name="customer_photo" type="file">
-                            <!-- <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help">A profile picture is useful to confirm your are logged into your account</div> -->
-                        </div>
+                    </div>
 
-                    </div>
-                    <!-- Modal footer -->
-                    <div class="Q_jg_EPdNf9eDMn1mLI2 IvHclGgvMLtYg_ow0uba pVSXSlnJdgskzP7BxPBe qUWbS_LTZujDB4XCd11V _4S0zan6DXh_qcS8KsOi _fGhMnSfYmaGrv7DvZ00">
-                        <button class="y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F c8dCx6gnV43hTOLV6ks5 ZjWEEmDsdPvU2GdH53LK cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM" type="submit">Add customer</button>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 d4louhNic5PFgJGRKqn6 RZmKBZs1E1eXw8vkE6jY _9igzqn_6D3Qq5Hcwkfk _Ura23Qklq9Ri0XExDX2">
+                    <button type="submit" data-modal-target="createUserAccordionModal" data-modal-toggle="createUserAccordionModal" class="_k0lTW0vvzboctTxDi2R t6gkcSf0Bt4MLItXvDJ_ Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU mveJTCIb2WII7J4sY22F g40_g3BQzYCOX5eZADgY ZjWEEmDsdPvU2GdH53LK cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe y6GKdvUrd7vp_pxsFb57 YoPCmQ0E_V5W0GGmSIdm BkIbg_JwkgiyRW804Hhu _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM">
+                        <svg class="_Tk8743voA_rOget_8jS IRKzgyPj4qWOh2vq2xBg _o2IXcpM0qnG3JPReKus E9GV5sZJIbfO_GEQ_moc" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"></path>
+                        </svg>
+                        Add new user
+                    </button>
+                    <button data-modal-toggle="createUserAccordionModal" type="button" class="t6gkcSf0Bt4MLItXvDJ_ mveJTCIb2WII7J4sY22F pXhVRBC8yaUNllmIWxln qUWbS_LTZujDB4XCd11V _Ybd3WwuTVljUT4vEaM3 ZjWEEmDsdPvU2GdH53LK cexDVMRjens2nRrMcG96 c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl _7KA5gD55t2lxf9Jkj20 YXx9oZ15oLXSCG32YPBT xKUZEM163cLLvNnDh2ZN BkIbg_JwkgiyRW804Hhu _dylIDxYTN3qgvD4U597 XGQIxPVjm_m7D0aLHB7Y Mmx5lX7HVdrWCgh3EpTP _1jTZ8KXRZul60S6czNi XIIs8ZOri3wm8Wnj9N_y OPrb_iG5WDy_7F05BDOX dMTOiA3mf3FTjlHu6DqW yChACvAr1v8czJ2VO22j">
+                        Discard
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
+    <script>
+        // Data: Mapping of Wards to their respective Tole names
+        const toles = {
+            "Ward-7": ["Tole 7A", "Tole 7B", "Tole 7C"],
+            "Ward-8": ["Tole 8A", "Tole 8B"],
+            "Ward-15": ["Tole 15A", "Tole 15B", "Tole 15C"]
+        };
+
+        // Elements
+        const wardSelect = document.getElementById('ward-no');
+        const toleSelect = document.getElementById('tole-name');
+
+        // Populate Tole dropdown based on the selected Ward
+        function populateToles(selectedWard) {
+            // Clear previous options
+            toleSelect.innerHTML = '<option value="" disabled selected>Select Tole</option>';
+
+            // Check if the selected ward has corresponding toles
+            if (toles[selectedWard]) {
+                toles[selectedWard].forEach(tole => {
+                    const option = document.createElement('option');
+                    option.value = tole;
+                    option.textContent = tole;
+                    toleSelect.appendChild(option);
+                });
+            }
+        }
+
+        // Event listener to update Tole options when Ward changes
+        wardSelect.addEventListener('change', function() {
+            populateToles(this.value);
+        });
+
+        // Optional: Initialize Tole options if there's a pre-selected Ward
+        const initialWard = wardSelect.value; // Assume the select element has a default value
+        if (initialWard) {
+            populateToles(initialWard);
+        }
+    </script>
 
 
     <!-- Delete User Modal -->
@@ -277,10 +291,10 @@
                     <!-- <a href="#" class="y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F d3C8uAdJKNl1jzfE9ynq _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id fhCwost7CSNRc2WSHLFW XBY_JGK9cKtkYP_iHVRb">
                         Yes, I'm sure
                     </a> -->
-                  
-                        <input type="hidden" name="customer_id" id="customer-id" value="">
 
-                        <button class="y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F d3C8uAdJKNl1jzfE9ynq _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id fhCwost7CSNRc2WSHLFW XBY_JGK9cKtkYP_iHVRb"> Yes, I'm sure </button>
+                    <input type="hidden" name="customer_id" id="customer-id" value="">
+
+                    <button class="y6GKdvUrd7vp_pxsFb57 SdPDrbResNmgnA0L4Iki _hwGprpWFg861uOaLs98 _dylIDxYTN3qgvD4U597 wGCv_lBIef6dPW_LgqPQ ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F d3C8uAdJKNl1jzfE9ynq _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 _Cj_M6jt2eLjDgkBBNgI cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id fhCwost7CSNRc2WSHLFW XBY_JGK9cKtkYP_iHVRb"> Yes, I'm sure </button>
                     <a href="#" class="__9sbu0yrzdhGIkLWNXl _Ybd3WwuTVljUT4vEaM3 _7KA5gD55t2lxf9Jkj20 _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T pXhVRBC8yaUNllmIWxln qUWbS_LTZujDB4XCd11V ezMFUVl744lvw6ht0lFe _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 mveJTCIb2WII7J4sY22F d3C8uAdJKNl1jzfE9ynq _Cj_M6jt2eLjDgkBBNgI cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id _1jTZ8KXRZul60S6czNi XIIs8ZOri3wm8Wnj9N_y Mmx5lX7HVdrWCgh3EpTP dMTOiA3mf3FTjlHu6DqW OPrb_iG5WDy_7F05BDOX yChACvAr1v8czJ2VO22j" data-modal-toggle="delete-user-modal">
                         No, cancel
                     </a>
@@ -289,7 +303,7 @@
         </div>
     </div>
 
-    
+
 
     <!-- Delete Confirmation Modal -->
     @if($customers->isNotEmpty())
@@ -319,34 +333,34 @@
             </form>
         </div>
     </div>
-@endif
+    @endif
 
 
-@if (session('success'))
+    @if (session('success'))
     @php
-        // Determine message type and assign corresponding colors
-        $message = session('success');
-        $bgColor = '';
-        $borderColor = '';
-        $textColor = '';
-        $heading = '';
+    // Determine message type and assign corresponding colors
+    $message = session('success');
+    $bgColor = '';
+    $borderColor = '';
+    $textColor = '';
+    $heading = '';
 
-        if (str_contains($message, 'created')) {
-        $bgColor = 'bg-green-100';
-        $borderColor = 'border-green-400';
-        $textColor = 'text-green-700';
-        $heading = 'Created!';
-        } elseif (str_contains($message, 'updated')) {
-        $bgColor = 'bg-blue-100';
-        $borderColor = 'border-blue-400';
-        $textColor = 'text-blue-700';
-        $heading = 'Updated!';
-        } elseif (str_contains($message, 'deleted')) {
-        $bgColor = 'bg-red-100';
-        $borderColor = 'border-red-400';
-        $textColor = 'text-red-700';
-        $heading = 'Deleted!';
-        }
+    if (str_contains($message, 'created')) {
+    $bgColor = 'bg-green-100';
+    $borderColor = 'border-green-400';
+    $textColor = 'text-green-700';
+    $heading = 'Created!';
+    } elseif (str_contains($message, 'updated')) {
+    $bgColor = 'bg-blue-100';
+    $borderColor = 'border-blue-400';
+    $textColor = 'text-blue-700';
+    $heading = 'Updated!';
+    } elseif (str_contains($message, 'deleted')) {
+    $bgColor = 'bg-red-100';
+    $borderColor = 'border-red-400';
+    $textColor = 'text-red-700';
+    $heading = 'Deleted!';
+    }
     @endphp
 
     <div

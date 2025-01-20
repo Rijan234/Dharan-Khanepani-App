@@ -50,7 +50,7 @@
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Enquiries</h2>
                 <div class="flex items-center justify-between">
                     <p class="text-gray-600">Total Enquiries</p>
-                    <p class="font-medium text-gray-800">23</p>
+                    <p class="font-medium text-gray-800 " id="enquiry">23</p>
                 </div>
             </div>
         </div>

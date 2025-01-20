@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Bill;
 use App\Models\Customer;
 use App\Models\Employee;
+use App\Models\Inbox;
 use App\Models\WaterLog;
 use Illuminate\Container\Attributes\DB;
 use Illuminate\Http\Request;
@@ -32,6 +33,9 @@ class WaterLogController extends Controller
     $customers= Customer::count();
     $employees= Employee::count();
 
+    // No of enquiries
+    $enquiries=Inbox::count();
+
      // Calculate the total sum of the 'total_amount' column
      $totalAmount = Bill::sum('total_amount');
 
@@ -43,6 +47,7 @@ class WaterLogController extends Controller
         'customers' => $customers,
         'employees' => $employees,
         'total_amount' => $totalAmount,
+        'enquiries'=>$enquiries,
     ]);
 }
 }

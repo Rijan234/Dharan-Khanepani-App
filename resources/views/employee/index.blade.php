@@ -30,11 +30,11 @@
 
                 </div>
                 <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 zjZIaeYZzHaaBqxD5KzF EU43bH15DCmsqkGyVBGj SNt2jJ6mOxoWkDWNP3rs">
-                    <button type="button" data-modal-toggle="add-user-modal" class="_k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU Ce_ecllpQM9Lc4yCjD_9 _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe ijrOHNoSVGATsWYKl4Id y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY mveJTCIb2WII7J4sY22F YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T icxWjIgUd9_dzYucx1nx d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM">
-                        <svg class="YIUegm7fh_CpJbivTu6B MnxxlQlR1H0xJuMEE8Yr fhCwost7CSNRc2WSHLFW ZEPNZzATe5nPnS0shmrF" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                <button type="button" id="createUserButton" data-modal-target="createUserAccordionModal" data-modal-toggle="createUserAccordionModal" class="YRrCJSr_j5nopfm4duUc t6gkcSf0Bt4MLItXvDJ_ Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU mveJTCIb2WII7J4sY22F g40_g3BQzYCOX5eZADgY _Cj_M6jt2eLjDgkBBNgI b9aD6g2qw84oyZNsMO8j c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe y6GKdvUrd7vp_pxsFb57 YoPCmQ0E_V5W0GGmSIdm BkIbg_JwkgiyRW804Hhu _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM icxWjIgUd9_dzYucx1nx">
+                        <svg class="_Tk8743voA_rOget_8jS IRKzgyPj4qWOh2vq2xBg _o2IXcpM0qnG3JPReKus E9GV5sZJIbfO_GEQ_moc" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"></path>
                         </svg>
-                        Add employee
+                        Add new user
                     </button>
 
                 </div>
@@ -154,26 +154,29 @@
 
 
 
-    <!-- Add User Modal -->
-    <div class="_LPVUrp9Uina5fcERqWC TYmpscr1PwuC1dpYXDpM ZjE1E_5ejL_PlLNIq3MM Jq3rRDG6Hsr3eAZ0KJeH Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU _SmdlCf6eUKB_V9S5IDj LQrvJzHhtGuotyv_EF_N _lTTGxW9MVI40FyDCtmr _lAzsNe8Mc9FYKCKyXJT k6hbvxXxe_du942IR0vX YEIqrYYZZnouxfWI2aiR NaQJIEi_uYbdAsDO0j69" id="add-user-modal">
-        <div class="ahOqFrhzLjivRe8a1kX_ t6gkcSf0Bt4MLItXvDJ_ uLPch_bqyJDXwe5tynMV TnCneWVBJS9LByVLKjZH RZmKBZs1E1eXw8vkE6jY IerQx_TrL55Lkoy6sBIE">
+   
+    
+    <!-- Create User Modal -->
+    <div id="createUserAccordionModal" tabindex="-1" aria-hidden="true" class="_LPVUrp9Uina5fcERqWC TYmpscr1PwuC1dpYXDpM ZjE1E_5ejL_PlLNIq3MM uQByIGHtHssL9HoPQXR4 Jq3rRDG6Hsr3eAZ0KJeH _SmdlCf6eUKB_V9S5IDj _dZO1Z7EjPZTzv7NappG D5X3kHheOzrTNzgpkKYX t6gkcSf0Bt4MLItXvDJ_ Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU _lTTGxW9MVI40FyDCtmr LQrvJzHhtGuotyv_EF_N k6hbvxXxe_du942IR0vX">
+        <div class="ahOqFrhzLjivRe8a1kX_ D5X3kHheOzrTNzgpkKYX t6gkcSf0Bt4MLItXvDJ_ TnCneWVBJS9LByVLKjZH _wYiJGbRZyFZeCc8y7Sf">
             <!-- Modal content -->
-            <div class="ahOqFrhzLjivRe8a1kX_ _Ybd3WwuTVljUT4vEaM3 mveJTCIb2WII7J4sY22F mngKhi_Rv06PF57lblDI _1jTZ8KXRZul60S6czNi">
+            <form action="{{ route('employee.store') }}" method="post" enctype="multipart/form-data" class="ahOqFrhzLjivRe8a1kX_ mveJTCIb2WII7J4sY22F _Ybd3WwuTVljUT4vEaM3 mngKhi_Rv06PF57lblDI _1jTZ8KXRZul60S6czNi">
+                @csrf
                 <!-- Modal header -->
-                <div class="YRrCJSr_j5nopfm4duUc _7_AEkSp_Gi6KH9ZW6st sJNGKHxFYdN5Nzml5J2j TcRv2CxEufCAnWVUJnDf EpUSgjHdM6oyMXUiK_8_ zQeL_bQRwh9WGEnvS5ug _fGhMnSfYmaGrv7DvZ00">
-                    <h3 class="vyo_A8gnQD1QWDPglr3h yM_AorRf2jSON3pDsdrz OyABRrnTV_kvHV7dJ0uE">
-                        Add new employee
-                    </h3>
-                    <button type="button" class="_JmTNv5EiHqK2A1jcQSf mW4LfSTbez3WHPeTDguY lBgPGkku8NiP5ReH09_2 ZnBoTVi7VOJdCLSSU62n mveJTCIb2WII7J4sY22F c8dCx6gnV43hTOLV6ks5 Z4DH5a4vmjReSFRBpPgz zjZIaeYZzHaaBqxD5KzF _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 OPrb_iG5WDy_7F05BDOX dMTOiA3mf3FTjlHu6DqW" data-modal-toggle="add-user-modal">
-                        <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 sJNGKHxFYdN5Nzml5J2j zQeL_bQRwh9WGEnvS5ug RZmKBZs1E1eXw8vkE6jY _9igzqn_6D3Qq5Hcwkfk _Ura23Qklq9Ri0XExDX2">
+                    <h3 class="y0nOgdpiqOUaFDbjAxwD yM_AorRf2jSON3pDsdrz __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Add new user</h3>
+                    <button type="button" class="zjZIaeYZzHaaBqxD5KzF _k0lTW0vvzboctTxDi2R Q_jg_EPdNf9eDMn1mLI2 mveJTCIb2WII7J4sY22F mW4LfSTbez3WHPeTDguY Z4DH5a4vmjReSFRBpPgz c8dCx6gnV43hTOLV6ks5 _JmTNv5EiHqK2A1jcQSf _7KA5gD55t2lxf9Jkj20 ZnBoTVi7VOJdCLSSU62n RzANcaqunVvlLrO6_tal dMTOiA3mf3FTjlHu6DqW" data-modal-toggle="createUserAccordionModal">
+                        <svg class="ADSeKHR1DvUUA48Chci_ rxe6apEJoEk8r75xaVNG" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"></path>
                         </svg>
+                        <span class="_DVAfiyo21kM68EUVzEQ">Close modal</span>
                     </button>
                 </div>
-                <!-- Modal body -->
-                <form action="{{ route('employee.store') }}" method="post" enctype="multipart/form-data">
-                    @csrf
-                    <div class="IvHclGgvMLtYg_ow0uba qDsn8ha5_HppqMcLKJwF">
+                <div id="accordion-collapse-create-user" data-accordion="collapse">
+
+                    <div id="accordion-collapse-body-3" class="" aria-labelledby="accordion-collapse-heading-3">
+                        <div class="qUWbS_LTZujDB4XCd11V _wYiJGbRZyFZeCc8y7Sf _fGhMnSfYmaGrv7DvZ00 _aDtgllJkTzUlILozHgX">
+                        <div class="IvHclGgvMLtYg_ow0uba qDsn8ha5_HppqMcLKJwF">
                         <div class="xCPtuxM4_gihvpPwv9bX xcwgeeZbzBfzbYbc32HH Bcw8VuwRWYxPGjWjS6Ig">
                             <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
                                 <label for="first-name" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">First Name</label>
@@ -185,7 +188,7 @@
                             </div>
                             <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
                                 <label for="address" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Address</label>
-                                <input type="address" name="address" id="address" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" autocomplete="off" required="">
+                                <input type="text" name="address" id="address" class="fzhbbDQ686T8arwvi_bJ jtAJHOc7mn7b4IKRO59D pXhVRBC8yaUNllmIWxln vpDN1VEJLu5FmLkr5WCk __9sbu0yrzdhGIkLWNXl gx_pYWtAG2cJIqhquLbx mveJTCIb2WII7J4sY22F GdTcGtoKP5_bET3syLDl LceKfSImrGKQrtDGkpBV _Vb9igHms0hI1PQcvp_S t6gkcSf0Bt4MLItXvDJ_ olxDi3yL6f0gpdsOFDhx jqg6J89cvxmDiFpnV56r Mmx5lX7HVdrWCgh3EpTP H7KQDhgKsqZaTUouEUQL OyABRrnTV_kvHV7dJ0uE KpCMWe32PQyrSFbZVput q6szSHqGtBufkToFe_s5" autocomplete="off" required="">
                             </div>
                             <div class="_P4crYcwEj3d10LO5o8N DlUdveMmz1SkMYd217vD">
                                 <label for="phone-number" class="_Vb9igHms0hI1PQcvp_S TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE">Phone Number</label>
@@ -209,12 +212,22 @@
                         </div>
 
                     </div>
-                    <!-- Modal footer -->
-                    <div class="Q_jg_EPdNf9eDMn1mLI2 IvHclGgvMLtYg_ow0uba pVSXSlnJdgskzP7BxPBe qUWbS_LTZujDB4XCd11V _4S0zan6DXh_qcS8KsOi _fGhMnSfYmaGrv7DvZ00">
-                        <button class="y6GKdvUrd7vp_pxsFb57 g40_g3BQzYCOX5eZADgY YoPCmQ0E_V5W0GGmSIdm _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T ezMFUVl744lvw6ht0lFe mveJTCIb2WII7J4sY22F c8dCx6gnV43hTOLV6ks5 ZjWEEmDsdPvU2GdH53LK cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM" type="submit">Add employee</button>
+                        </div>
                     </div>
-                </form>
-            </div>
+
+                </div>
+                <div class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 d4louhNic5PFgJGRKqn6 RZmKBZs1E1eXw8vkE6jY _9igzqn_6D3Qq5Hcwkfk _Ura23Qklq9Ri0XExDX2">
+                    <button type="submit" data-modal-target="createUserAccordionModal" data-modal-toggle="createUserAccordionModal" class="_k0lTW0vvzboctTxDi2R t6gkcSf0Bt4MLItXvDJ_ Q_jg_EPdNf9eDMn1mLI2 Nm7xMnguzOx6J5Ao7yCU mveJTCIb2WII7J4sY22F g40_g3BQzYCOX5eZADgY ZjWEEmDsdPvU2GdH53LK cexDVMRjens2nRrMcG96 ijrOHNoSVGATsWYKl4Id c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe y6GKdvUrd7vp_pxsFb57 YoPCmQ0E_V5W0GGmSIdm BkIbg_JwkgiyRW804Hhu _dylIDxYTN3qgvD4U597 KmgKPWh7pHX4ztLneO0T d8_fVOcgDmbt7UdpfeLK WuKugQzwTT7o1wwBck2R _ZsTMX_gz275093orLWM">
+                        <svg class="_Tk8743voA_rOget_8jS IRKzgyPj4qWOh2vq2xBg _o2IXcpM0qnG3JPReKus E9GV5sZJIbfO_GEQ_moc" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"></path>
+                        </svg>
+                        Add new user
+                    </button>
+                    <button data-modal-toggle="createUserAccordionModal" type="button" class="t6gkcSf0Bt4MLItXvDJ_ mveJTCIb2WII7J4sY22F pXhVRBC8yaUNllmIWxln qUWbS_LTZujDB4XCd11V _Ybd3WwuTVljUT4vEaM3 ZjWEEmDsdPvU2GdH53LK cexDVMRjens2nRrMcG96 c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl _7KA5gD55t2lxf9Jkj20 YXx9oZ15oLXSCG32YPBT xKUZEM163cLLvNnDh2ZN BkIbg_JwkgiyRW804Hhu _dylIDxYTN3qgvD4U597 XGQIxPVjm_m7D0aLHB7Y Mmx5lX7HVdrWCgh3EpTP _1jTZ8KXRZul60S6czNi XIIs8ZOri3wm8Wnj9N_y OPrb_iG5WDy_7F05BDOX dMTOiA3mf3FTjlHu6DqW yChACvAr1v8czJ2VO22j">
+                        Discard
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 
