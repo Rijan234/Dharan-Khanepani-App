@@ -37,11 +37,13 @@
           <label for="email" class="block text-lg font-medium text-gray-700 mb-3">Email</label>
           <input type="email" id="email" name="email" required  autocomplete="off"
                  class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg">
+                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
         <div class="mb-8">
           <label for="password" class="block text-lg font-medium text-gray-700 mb-3">Password</label>
           <input type="password" id="password" name="password" required 
                  class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg">
+                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
         <button type="submit" 
                 class="w-full bg-blue-500 text-white py-3 px-5 rounded-lg text-lg hover:bg-blue-600 transition duration-200">
