@@ -1,14 +1,16 @@
 <x-layout>
     <div class="g8xck_hLZnz5bWCmx2Dw">
         <div class="_9igzqn_6D3Qq5Hcwkfk d3C8uAdJKNl1jzfE9ynq yM_AorRf2jSON3pDsdrz __9sbu0yrzdhGIkLWNXl">
-            This is the schedule routine followed by the Dharan Water Supply Management.
+            <h1 class="text-center text-xl font-normal text-gray-900 dark:text-white">This is the schedule routine followed by the Dharan Water Supply Management.</h1>
         </div>
-        @if($photo)
-        <div class="w-20 m-4">
-            <img src="{{ asset($photo->routine_photo) }}" alt="Routine Photo" class="cursor-pointer" onclick="openModal('{{ asset($photo->routine_photo) }}')">
-        </div>
-
-        @endif
+        <div class="d-flex align-items-start" style="flex-wrap: nowrap;">
+    @if($photo)
+    <div class="w-300 mr-3">
+        <img src="{{ asset($photo->routine_photo) }}" alt="Routine Photo" width="400" class="cursor-pointer" onclick="openModal('{{ asset($photo->routine_photo) }}')">
+    </div>
+    <p>Click to zoom</p>
+    @endif
+    <div class="w-1/3 ms-2">
         <form id="photoForm" action="{{ route('routine.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <!-- Hidden file input -->
@@ -24,18 +26,21 @@
             </button>
         </form>
     </div>
+</div>
+
+    </div>
 
 
     <!-- Modal for viewing full image -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 ">
         <div class="relative flex justify-center items-center">
             <img id="modalImage" class="max-w-full max-h-screen object-contain" src="" alt="Full Image">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-white text-2xl font-bold">&times;</button>
         </div>
     </div>
 
-    <div>
-        <h1> Daily Water Schedule </h1>
+    <div class="p-2">
+        <h1 class="text-center text-4xl font-normal text-gray-900 dark:text-white"> Daily Water Schedule </h1>
 
 
         <!-- Modal toggle -->
@@ -51,7 +56,7 @@
                     <!-- Modal header -->
                     <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                            Create New Product
+                            Create New Schedule
                         </h3>
                         <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
                             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
@@ -135,7 +140,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="p-4">
             <table class="table-auto w-full border-collapse border border-gray-300">
                 <thead class="bg-gray-100">
                     <tr>
@@ -162,32 +167,32 @@
         </div>
 
     </div>
-    
+
     @if (session('success'))
     @php
-        // Determine message type and assign corresponding colors
-        $message = session('success');
-        $bgColor = '';
-        $borderColor = '';
-        $textColor = '';
-        $heading = '';
+    // Determine message type and assign corresponding colors
+    $message = session('success');
+    $bgColor = '';
+    $borderColor = '';
+    $textColor = '';
+    $heading = '';
 
-        if (str_contains($message, 'created')) {
-        $bgColor = 'bg-green-100';
-        $borderColor = 'border-green-400';
-        $textColor = 'text-green-700';
-        $heading = 'Created!';
-        } elseif (str_contains($message, 'updated')) {
-        $bgColor = 'bg-blue-100';
-        $borderColor = 'border-blue-400';
-        $textColor = 'text-blue-700';
-        $heading = 'Updated!';
-        } elseif (str_contains($message, 'deleted')) {
-        $bgColor = 'bg-red-100';
-        $borderColor = 'border-red-400';
-        $textColor = 'text-red-700';
-        $heading = 'Deleted!';
-        }
+    if (str_contains($message, 'created')) {
+    $bgColor = 'bg-green-100';
+    $borderColor = 'border-green-400';
+    $textColor = 'text-green-700';
+    $heading = 'Created!';
+    } elseif (str_contains($message, 'updated')) {
+    $bgColor = 'bg-blue-100';
+    $borderColor = 'border-blue-400';
+    $textColor = 'text-blue-700';
+    $heading = 'Updated!';
+    } elseif (str_contains($message, 'deleted')) {
+    $bgColor = 'bg-red-100';
+    $borderColor = 'border-red-400';
+    $textColor = 'text-red-700';
+    $heading = 'Deleted!';
+    }
     @endphp
 
     <div

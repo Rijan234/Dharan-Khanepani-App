@@ -7,7 +7,7 @@
 
         <div>
 
-            <div class="w-[100%] mx-auto overflow-x-auto bg-white shadow-lg border border-gray-200">
+            <div class="w-[100%] mx-auto overflow-x-auto bg-white shadow-lg border border-gray-200 p-4">
                 <table class="min-w-[1500px] table-auto border-collapse export-table">
                     <thead class="bg-blue-100 text-blue-700 text-sm font-semibold">
                         <tr>

@@ -122,7 +122,7 @@
         <!-- Ward-wise Data -->
         <section class="mb-5">
             <h3 class="text-primary text-center mb-4">Ward-wise Customer Count</h3>
-            <div class="w-100">
+            <div class="w-100 ps-10 pe-10 pb-10">
                 <canvas id="wardChart" class="w-100" style="height: 400px;"></canvas>
             </div>
         </section>
@@ -130,7 +130,7 @@
         <!-- Tole-wise Data -->
         <section>
             <h3 class="text-secondary text-center mb-4">Tole-wise Customer Count (Under each Ward)</h3>
-            <div class="w-100">
+            <div class="w-100 ps-10 pe-10 pb-10">
                 <canvas id="toleChart" class="w-100" style="height: 400px;"></canvas>
             </div>
         </section>
