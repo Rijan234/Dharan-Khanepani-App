@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SuperAdminController;
 use App\Http\Controllers\Backend\BillController;
 use App\Http\Controllers\Backend\BillingController;
 use App\Http\Controllers\Backend\CustomerController;
@@ -10,35 +11,36 @@ use App\Http\Controllers\Backend\RoutineController;
 use App\Http\Controllers\Backend\SchedulerController;
 use App\Http\Controllers\Backend\StatisticsController;
 use App\Http\Controllers\Backend\WaterLogController;
-
 use App\Http\Controllers\HelpController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ScheduleController;
+use App\Http\Middleware\SuperAdminAuth;
 use Illuminate\Support\Facades\Route;
 
+// Main route (welcome)
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/test', function () {
-    return view('test');
-});
 
-Route::get('/app', function () {
-    return view('layout/app');
-});
-#creating route to redirect user to view 'register.blade.php' to register a new accont
+// Super Admin Login Routes
+Route::get('/super-admin-login', [SuperAdminController::class, 'showLoginForm'])->name('super-admin.login');
+Route::post('/super-admin-login', [SuperAdminController::class, 'login'])->name('super-admin.login.submit');
 
 
+// Apply SuperAdminAuth middleware to the register route
+Route::get('/super-admin-register', function () {
+    return view('super-admin-register');
+})->middleware(SuperAdminAuth::class)->name('super-admin-register');
 
+// Dashboard Route, only for authenticated users
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// Authenticated routes group
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
 
     Route::resource('/statistics', StatisticsController::class)->names('statistics');
     Route::resource('/customer', CustomerController::class)->names('customer');
@@ -49,19 +51,17 @@ Route::middleware('auth')->group(function () {
     Route::resource('/help', HelpController::class)->names('help');
     Route::resource('/billing', BillController::class)->names('billing');
 
-
-    // water level
+    // Water level
     Route::get('/update-water-level', [WaterLogController::class, 'updateWaterLog']);
 
-    // search customer
+    // Search customer
     Route::get('/test-search', [BillingController::class, 'search'])->name('test-search');
-    // for chartjs
+    // For chartjs
     Route::get('/data', [BillingController::class, 'getCustomerData']);
 
-    // enquiry request
+    // Enquiry request
     Route::post('/enquiry/complete/{id}', [EnquiryController::class, 'complete'])->name('enquiry-complete');
     Route::delete('/enquiry/destroy/{id}', [EnquiryController::class, 'destroy'])->name('enquiry-destroy');
-
 });
 
 require __DIR__ . '/auth.php';

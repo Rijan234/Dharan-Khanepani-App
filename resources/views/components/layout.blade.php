@@ -53,17 +53,21 @@
     <!-- water level -->
       <!-- Second JavaScript Portion: Fetch Data and Update Chart -->
       <script>
-        function updateWaterLevel() {
-            fetch('/update-water-level')
-                .then(response => response.json())
-                .then(data => {
-                    const currentLevel = data.current_level;
-                    const incoming_rate = data.incoming_rate;
-                    const outgoing_rate = data.outgoing_rate;
-                    const customers = data.customers;
-                    const employees = data.employees;
-                    const total_amount = data.total_amount;
-                    const enquiry = data.enquiries;
+        document.addEventListener("DOMContentLoaded", function () {
+    function updateWaterLevel() {
+        fetch('/update-water-level')
+            .then(response => response.json())
+            .then(data => {
+                const currentLevel = data.current_level;
+                const incoming_rate = data.incoming_rate;
+                const outgoing_rate = data.outgoing_rate;
+                const customers = data.customers;
+                const employees = data.employees;
+                const total_amount = data.total_amount;
+                const enquiry = data.enquiries;
+
+                // Ensure elements exist before updating them
+                if (document.getElementById('water-level')) {
                     document.getElementById('water-level').textContent = currentLevel + ' liters';
                     document.getElementById('incoming-rate').textContent = incoming_rate + ' l/s';
                     document.getElementById('outgoing-rate').textContent = outgoing_rate + ' l/s';
@@ -71,25 +75,32 @@
                     document.getElementById('employees-no').textContent = employees;
                     document.getElementById('total-amount').textContent = "Rs. " + total_amount;
                     document.getElementById('enquiry').textContent = enquiry;
+
                     // Calculate available water percentage and empty space
-                    availableWater = (currentLevel / 1600000) * 100; // Assuming 1,600,000 is the tank's max capacity
-                    emptySpace = 100 - availableWater;
+                    let availableWater = (currentLevel / 1600000) * 100; // Assuming 1,600,000 is the tank's max capacity
+                    let emptySpace = 100 - availableWater;
 
-                    // Update chart data
-                    waterLevelChart.data.datasets[0].data = [availableWater, emptySpace];
-                    waterLevelChart.update();
+                    // Ensure the chart exists before updating
+                    if (typeof waterLevelChart !== 'undefined') {
+                        waterLevelChart.data.datasets[0].data = [availableWater, emptySpace];
+                        waterLevelChart.update();
+                    }
 
-
-                    // to show time
-                    const time = (currentLevel/1000)/(outgoing_rate*3.6);
+                    // Calculate and display water lasting time
+                    const time = (currentLevel / 1000) / (outgoing_rate * 3.6);
                     document.getElementById('water-lasting-time').textContent = time.toFixed(2) + ' hours';
-                    // document.getElementById('water-lasting-time').textContent = time.toFixed(2) + ' hours';
-                })
-                .catch(error => console.error('Error:', error));
-        }
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
 
-        // Update water level every second
-        setInterval(updateWaterLevel, 100000);
-    </script>
+    // Run updateWaterLevel once after DOM is fully loaded
+    updateWaterLevel();
+
+    // Update water level every 100 seconds
+    setInterval(updateWaterLevel, 100000);
+});
+
+      </script>
 </body>
 </html>

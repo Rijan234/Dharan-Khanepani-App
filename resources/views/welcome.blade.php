@@ -52,7 +52,7 @@
         </button>
        
         <div class="text-center mt-6">
-          <a href="/register" class="text-blue-500 hover:underline text-lg">
+          <a href="{{ route('super-admin-register') }}" class="text-blue-500 hover:underline text-lg">
             Create New Account
           </a>
         </div>
